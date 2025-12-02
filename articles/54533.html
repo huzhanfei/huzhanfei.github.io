@@ -2,12 +2,11 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.4.0">
-
-<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.1">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/images/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/images/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/images/favicon-16x16.png">
@@ -19,16 +18,15 @@
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/css/main.css">
 
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Righteous:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.css">
-  <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.js"></script>
 
-<script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;www.bytelife.net&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;huzhanfei&#x2F;blog-assets&#x2F;images&quot;,&quot;scheme&quot;:&quot;Gemini&quot;,&quot;version&quot;:&quot;8.4.0&quot;,&quot;exturl&quot;:true,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:true,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:true,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:true,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;none&quot;,&quot;post_body&quot;:&quot;none&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;搜索...&quot;,&quot;empty&quot;:&quot;没有找到任何搜索结果：${query}&quot;,&quot;hits_time&quot;:&quot;找到 ${hits} 个搜索结果（用时 ${time} 毫秒）&quot;,&quot;hits&quot;:&quot;找到 ${hits} 个搜索结果&quot;},&quot;path&quot;:&quot;&#x2F;search.json&quot;,&quot;localsearch&quot;:{&quot;enable&quot;:true,&quot;trigger&quot;:&quot;auto&quot;,&quot;top_n_per_article&quot;:1,&quot;unescape&quot;:false,&quot;preload&quot;:false}}</script>
-<meta name="description" content="状态码的职责是当客户端向服务器端发送请求时，描述返回请求结果。借助状态码，用户可以知道服务器端是正常处理了请求，还是出现了什么错误。 RFC2616 定义的状态码，由 3 位数字和原因短信组成。 数字中的第一位指定了响应类别，后两位无分类。响应类别有以下 5 种：">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.css" integrity="sha256-gkQVf8UKZgQ0HyuxL/VnacadJ+D2Kox2TCEBuNQg5+w=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.bytelife.net","root":"/","images":"https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/images","scheme":"Gemini","darkmode":true,"version":"8.26.0","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"atom-one-light","dark":"atom-one-dark"},"prism":{"light":"prism-tomorrow","dark":"prism-tomorrow"},"copy_button":{"enable":true,"style":"mac"},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/config.js" defer></script>
+
+    <meta name="description" content="状态码的职责是当客户端向服务器端发送请求时，描述返回请求结果。借助状态码，用户可以知道服务器端是正常处理了请求，还是出现了什么错误。 RFC2616 定义的状态码，由 3 位数字和原因短信组成。 数字中的第一位指定了响应类别，后两位无分类。响应类别有以下 5 种：">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HTTP 常见状态码解释">
 <meta property="og:url" content="https://www.bytelife.net/articles/54533.html">
@@ -45,11 +43,52 @@
 <link rel="canonical" href="https://www.bytelife.net/articles/54533.html">
 
 
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.bytelife.net/articles/54533.html","path":"articles/54533.html","title":"HTTP 常见状态码解释"}</script>
 
-<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;zh-CN&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;https:&#x2F;&#x2F;www.bytelife.net&#x2F;articles&#x2F;54533.html&quot;,&quot;path&quot;:&quot;articles&#x2F;54533.html&quot;,&quot;title&quot;:&quot;HTTP 常见状态码解释&quot;}</script>
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>HTTP 常见状态码解释 | ByteLife</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-190433082-1"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-190433082-1","only_pageview":false,"measure_protocol_api_secret":null}</script>
+  <script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/third-party/analytics/google-analytics.js" defer></script>
 
-<script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
-<title>HTTP 常见状态码解释 | ByteLife</title><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.4.0/source/js/config.min.js"></script><link rel="dns-prefetch" href="https://waline.bytelife.net">
+  <script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/third-party/analytics/baidu-analytics.js" defer></script>
+  <script async src="https://hm.baidu.com/hm.js?ac759e323761a6cf4dc954a77df30b81"></script>
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.umd.js" integrity="sha256-a+H7FYzJv6oU2hfsfDGM2Ohw/cR9v+hPfxHCLdmCrE8=" crossorigin="anonymous" defer></script>
+<script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/utils.js" defer></script><script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/motion.js" defer></script><script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/sidebar.js" defer></script><script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/next-boot.js" defer></script><script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/pjax.js" defer></script>
+
+  
+
+
+
+  <script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/third-party/fancybox.js" defer></script>
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css" integrity="sha256-UF1fgpAiu3tPJN/uCqEUHNe7pnr+QR0SQDNfgglgtcM=" crossorigin="anonymous">
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/3.0.1/quicklink.umd.js" integrity="sha256-44BednzIpUeQJcY8qtLyarFu0UCCTbgmWOvaoehiFQQ=" crossorigin="anonymous" defer></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":false,"delay":true,"timeout":3000,"priority":true,"url":"https://www.bytelife.net/articles/54533.html"}</script>
+  <script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/third-party/quicklink.js" defer></script>
+<link rel="dns-prefetch" href="https://waline.bytelife.net">
 <meta name="keywords" content="https,http,linux,java,网络协议,tcp,状态码,404,301,302,500,200,ByteLife,Jeffrey" />
 
 
@@ -93,16 +132,6 @@ window.addEventListener('load', () => {
     s.parentNode.insertBefore(el, s);
 })();
 </script>
-  
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-190433082-1"></script>
-  <script class="next-config" data-name="google_analytics" type="application/json">{&quot;tracking_id&quot;:&quot;UA-190433082-1&quot;,&quot;only_pageview&quot;:false}</script>
-  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.4.0/source/js/third-party/analytics/google-analytics.min.js"></script>
-
-  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.4.0/source/js/third-party/analytics/baidu-analytics.min.js"></script>
-  <script async src="https://hm.baidu.com/hm.js?ac759e323761a6cf4dc954a77df30b81"></script>
-
-
-
   <noscript>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/css/noscript.css">
   </noscript>
@@ -113,8 +142,8 @@ window.addEventListener('load', () => {
   <div class="headband"></div>
 
   <main class="main">
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="切换导航栏" role="button">
         <span class="toggle-line"></span>
@@ -127,7 +156,7 @@ window.addEventListener('load', () => {
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">ByteLife</h1>
+      <p class="site-title">ByteLife</p>
       <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">技术交流与学习自留地</p>
@@ -135,8 +164,7 @@ window.addEventListener('load', () => {
   </div>
 
   <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-        <i class="fa fa-search fa-fw fa-lg"></i>
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
     </div>
   </div>
 </div>
@@ -144,53 +172,16 @@ window.addEventListener('load', () => {
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu">
-        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>本站首页</a></li>
-        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于本站</a></li>
-        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>文章分类</a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>时间轴</a></li>
-        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签云</a></li>
-      <li class="menu-item menu-item-search">
-        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
-        </a>
-      </li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>本站首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于本站</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>文章分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>时间轴</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签云</a></li>
   </ul>
 </nav>
 
 
 
-  <div class="search-pop-overlay">
-    <div class="popup search-popup"><div class="search-header">
-  <span class="search-icon">
-    <i class="fa fa-search"></i>
-  </span>
-  <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off" maxlength="80"
-           placeholder="搜索..." spellcheck="false"
-           type="search" class="search-input">
-  </div>
-  <span class="popup-btn-close" role="button">
-    <i class="fa fa-times-circle"></i>
-  </span>
-</div>
-<div class="search-result-container no-result">
-  <div class="search-result-icon">
-    <i class="fa fa-spinner fa-pulse fa-5x"></i>
-  </div>
-</div>
 
-    </div>
-  </div>
-
-</div>
+</header>
         
   
-  <div class="toggle sidebar-toggle" role="button">
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-  </div>
-
   <aside class="sidebar">
 
     <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
@@ -211,36 +202,33 @@ window.addEventListener('load', () => {
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="Jeffrey"
       src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/images/avatar.jpg">
   <p class="site-author-name" itemprop="name">Jeffrey</p>
   <div class="site-description" itemprop="description">专注于Java、Go、网络、网站、数码设备等技术交流与学习的个人博客</div>
 </div>
-<div class="site-state-wrap site-overview-item animated">
+<div class="site-state-wrap animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
+        <a href="/archives/">
           <span class="site-state-item-count">46</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
+          <a href="/categories/">
         <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
+          <a href="/tags/">
         <span class="site-state-item-count">27</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
-  <div class="links-of-author site-overview-item animated">
+  <div class="links-of-author animated">
       <span class="links-of-author-item">
         <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2h1emhhbmZlaQ==" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;huzhanfei"><i class="fab fa-github fa-fw"></i></span>
       </span>
@@ -248,35 +236,24 @@ window.addEventListener('load', () => {
         <span class="exturl" data-url="bWFpbHRvOmh1emhhbmZlaUBvdXRsb29rLmNvbQ==" title="E-Mail → mailto:huzhanfei@outlook.com"><i class="fa fa-envelope fa-fw"></i></span>
       </span>
       <span class="links-of-author-item">
-        <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fa fa-rss fa-fw"></i></a>
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml" rel="noopener me"><i class="fa fa-rss fa-fw"></i></a>
       </span>
   </div>
-  <div class="cc-license site-overview-item animated" itemprop="license">
-    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><img src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/images/cc-by-nc-sa.svg" alt="Creative Commons"></span>
+  <div class="cc-license animated" itemprop="license">
+    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></span>
   </div>
-
-
 
         </div>
       </div>
     </div>
-  </aside>
-  <div class="sidebar-dimmer"></div>
-
-
-    </header>
 
     
-  <div class="back-to-top" role="button" aria-label="返回顶部">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-  <div class="reading-progress-bar"></div>
+        <div class="pjax">
+        </div>
+  </aside>
 
-<noscript>
-  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
-</noscript>
 
+    </div>
 
     <div class="main-inner post posts-expand">
 
@@ -294,11 +271,16 @@ window.addEventListener('load', () => {
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/images/avatar.jpg">
       <meta itemprop="name" content="Jeffrey">
-      <meta itemprop="description" content="专注于Java、Go、网络、网站、数码设备等技术交流与学习的个人博客">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="ByteLife">
+      <meta itemprop="description" content="专注于Java、Go、网络、网站、数码设备等技术交流与学习的个人博客">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="HTTP 常见状态码解释 | ByteLife">
+      <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -326,13 +308,6 @@ window.addEventListener('load', () => {
     </span>
 
   
-    <span class="post-meta-item" title="阅读" id="busuanzi_container_page_pv">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读：</span>
-      <span id="busuanzi_value_page_pv"></span>
-    </span>
   
   <span class="post-meta-item">
     
@@ -341,27 +316,26 @@ window.addEventListener('load', () => {
     </span>
     <span class="post-meta-item-text">评论：</span>
   
-    <a title="waline" href="/articles/54533.html#waline-comments" itemprop="discussionUrl">
-      <span class="post-comments-count waline-comment-count" id="/articles/54533.html" data-xid="/articles/54533.html" itemprop="commentCount"></span>
+    <a title="waline" href="/articles/54533.html#waline" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" data-path="/articles/54533.html" itemprop="commentCount"></span>
     </a>
   </span>
   
   
-      </div>
-      <div class="post-meta">
+    <span class="post-meta-break"></span>
     <span class="post-meta-item" title="本文字数">
       <span class="post-meta-item-icon">
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>3.2k</span>
+      <span>1.9k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>16 分钟</span>
+      <span>19 分钟</span>
     </span>
 </div>
 
@@ -371,8 +345,7 @@ window.addEventListener('load', () => {
     
     
     
-    <div class="post-body" itemprop="articleBody">
-        <p>状态码的职责是当客户端向服务器端发送请求时，描述返回请求结果。借助状态码，用户可以知道服务器端是正常处理了请求，还是出现了什么错误。 RFC2616 定义的状态码，由 3 位数字和原因短信组成。 数字中的第一位指定了响应类别，后两位无分类。响应类别有以下 5 种：</p>
+    <div class="post-body" itemprop="articleBody"><p>状态码的职责是当客户端向服务器端发送请求时，描述返回请求结果。借助状态码，用户可以知道服务器端是正常处理了请求，还是出现了什么错误。 RFC2616 定义的状态码，由 3 位数字和原因短信组成。 数字中的第一位指定了响应类别，后两位无分类。响应类别有以下 5 种：</p>
 <span id="more"></span>
 
 <table>
@@ -386,27 +359,27 @@ window.addEventListener('load', () => {
 <tbody><tr>
 <td>1XX</td>
 <td>Informational</td>
-<td> 信息性状态码，表示接受的请求正在处理</td>
+<td>信息性状态码，表示接受的请求正在处理</td>
 </tr>
 <tr>
-<td> 2XX</td>
+<td>2XX</td>
 <td>Success</td>
-<td> 成功状态码，表示请求正常处理完毕</td>
+<td>成功状态码，表示请求正常处理完毕</td>
 </tr>
 <tr>
-<td> 3XX</td>
+<td>3XX</td>
 <td>Redirection</td>
-<td> 重定向状态码，表示需要客户端需要进行附加操作</td>
+<td>重定向状态码，表示需要客户端需要进行附加操作</td>
 </tr>
 <tr>
-<td> 4XX</td>
+<td>4XX</td>
 <td>Client Error</td>
-<td> 客户端错误状态码，表示服务器无法处理请求</td>
+<td>客户端错误状态码，表示服务器无法处理请求</td>
 </tr>
 <tr>
-<td> 5XX</td>
+<td>5XX</td>
 <td>Server Error</td>
-<td> 服务器错误状态码，表示服务器处理请求出错</td>
+<td>服务器错误状态码，表示服务器处理请求出错</td>
 </tr>
 </tbody></table>
 <p>RFC2616 记录的 HTTP 状态码有 37 种，再加上「WebDAV」(RFC4918、5842) 和「Additional HTTP Status Codes」(RFC6585)，数量就达到 60 多种。 然并卵，这么多种 HTTP 状态码，其实常用的大概只有 14 种，本文就讲讲这 14 种状态码。</p>
@@ -414,27 +387,27 @@ window.addEventListener('load', () => {
 <p>This class of status code indicates that the client’s request was successfully received, understood, and accepted.</p>
 </blockquote>
 <p>2xx 响应结果表示从客户端发来的请求在服务器端被正常处理了。</p>
-<h3 id="200-OK"><a href="#200-OK" class="headerlink" title="200 OK"></a>200 OK</h3><p>请求被成功处理，服务器会根据不同的请求方法返回结果： <strong>GET</strong>：请求的对应资源会作为响应返回。 <strong>HEAD</strong>：请求的对应资源的响应头 (entity-header) 会作为响应返回，不包括响应体 (message-body)。 <strong>POST</strong>：返回处理对应请求的结果。</p>
-<h3 id="204-No-Content"><a href="#204-No-Content" class="headerlink" title="204 No Content"></a>204 No Content</h3><p>该状态码表示服务器接收到的请求已经处理完毕，但是服务器不需要返回响应体。比如，客户端是浏览器的话，发出的请求返回 204 响应，那么浏览器显示的页面不会发生更新。</p>
-<h3 id="206-Partial-Content"><a href="#206-Partial-Content" class="headerlink" title="206 Partial Content"></a>206 Partial Content</h3><p>该状态码表示客户端进行了范围请求，而服务器成功执行了这部分的 GET 请求。 客户端发起的请求，必须在请求头中包含 <code>Range</code> 字段。服务端响应报文中，必须包含由 <code>Content-Range</code> 指定范围的实体内容 (entity-bodies)</p>
+<h3 id="200-OK"><a href="#200-OK" class="headerlink" title="200 OK"></a>200 OK</h3><p>请求被成功处理，服务器会根据不同的请求方法返回结果： <strong>GET</strong>：请求的对应资源会作为响应返回。 <strong>HEAD</strong>：请求的对应资源的响应头 (entity-header) 会作为响应返回, 不包括响应体 (message-body)。 <strong>POST</strong>：返回处理对应请求的结果。</p>
+<h3 id="204-No-Content"><a href="#204-No-Content" class="headerlink" title="204 No Content"></a>204 No Content</h3><p>该状态码表示服务器接收到的请求已经处理完毕，但是服务器不需要返回响应体. 比如，客户端是浏览器的话，发出的请求返回 204 响应，那么浏览器显示的页面不会发生更新。</p>
+<h3 id="206-Partial-Content"><a href="#206-Partial-Content" class="headerlink" title="206 Partial Content"></a>206 Partial Content</h3><p>该状态码表示客户端进行了范围请求，而服务器成功执行了这部分的 GET 请求。 客户端发起的请求，必须在请求头中包含<code>Range</code>字段。服务端响应报文中，必须包含由<code>Content-Range</code>指定范围的实体内容 (entity-bodies)</p>
 <h2 id="3XX-Redirection"><a href="#3XX-Redirection" class="headerlink" title="3XX Redirection"></a>3XX Redirection</h2><blockquote>
 <p>This class of status code indicates that further action needs to be taken by the user agent in order to fulfill the request.</p>
 </blockquote>
 <p>3XX 响应结果表明浏览器需要执行某些特殊的处理以完成请求。</p>
-<h3 id="301-Moved-Permanently"><a href="#301-Moved-Permanently" class="headerlink" title="301 Moved Permanently"></a>301 Moved Permanently</h3><p>永久性重定向。该状态码表示请求的资源已经被分配了新的 URI，并且以后使用资源现在所指的 URI。并且根据请求的方法有不同的处理方式：<br><strong>HEAD</strong>：必须在响应头部 <code>Location</code> 字段中指明新的永久性的 URI。<br><strong>GET</strong>：除了有 <code>Location</code> 字段以外，还需要在响应体中附上永久性 URI 的超链接文本。<br><strong>POST</strong>：客户端在发送 POST 请求，受到 301 响应之后，不应该自动跳转 URI，应当让用户确认跳转。 比如，如果一个 URI 已经在浏览器中被收藏为书签，这时应该按照 <code>Location</code> 首部字段提示的 URI 重新保存。 </p>
+<h3 id="301-Moved-Permanently"><a href="#301-Moved-Permanently" class="headerlink" title="301 Moved Permanently"></a>301 Moved Permanently</h3><p>永久性重定向。该状态码表示请求的资源已经被分配了新的 URI，并且以后使用资源现在所指的 URI。并且根据请求的方法有不同的处理方式：<br><strong>HEAD</strong>：必须在响应头部<code>Location</code>字段中指明新的永久性的 URI。<br><strong>GET</strong>：除了有<code>Location</code>字段以外，还需要在响应体中附上永久性 URI 的超链接文本。<br><strong>POST</strong>：客户端在发送 POST 请求，受到 301 响应之后，不应该自动跳转 URI，应当让用户确认跳转。 比如，如果一个 URI 已经在浏览器中被收藏为书签，这时应该按照<code>Location</code>首部字段提示的 URI 重新保存。 </p>
 <h3 id="302-Found"><a href="#302-Found" class="headerlink" title="302 Found"></a>302 Found</h3><p>临时性重定向。该状态码表示请求的资源已被分配了新的 URI，希望用户本次能使用新的 URI 访问。 和 301 Moved Permanently 状态码相似，但 302 状态码代表的资源不是被永久移动，只是临时性质的。 如果，用户把一个 URI 收藏为书签，302 响应是不会像 301 那样去更新书签。</p>
-<h3 id="303-See-Other"><a href="#303-See-Other" class="headerlink" title="303 See Other"></a>303 See Other</h3><p>该状态码表示由于请求对应的资源存在另一个 URI，应使用 GET 方法定向获取请求的资源。303 与 302 不同之处在于，302 是不会改变请求的方法，如果请求方法是 POST 的话，重定向的请求也应该是 POST。而对于 303，使用 POST 请求的话，重定向的请求应该是 GET 请求。 但是有一点是需要注意的，许多 HTTP/1.1 版以前的浏览器不能正确理解 303 状态码，很多现存的浏览器讲 302 响应视为 303 响应，并且使用 GET 方式访问 <code>Location</code> 中规定的的 URI，而无视原先请求的方法。 在 RFC2616 中有相关的这样一段原文：</p>
+<h3 id="303-See-Other"><a href="#303-See-Other" class="headerlink" title="303 See Other"></a>303 See Other</h3><p>该状态码表示由于请求对应的资源存在另一个 URI，应使用 GET 方法定向获取请求的资源。303 与 302 不同之处在于，302 是不会改变请求的方法，如果请求方法是 POST 的话，重定向的请求也应该是 POST。而对于 303，使用 POST 请求的话，重定向的请求应该是 GET 请求。 但是有一点是需要注意的，许多 HTTP / 1.1 版以前的浏览器不能正确理解 303 状态码，很多现存的浏览器讲 302 响应视为 303 响应，并且使用 GET 方式访问<code>Location</code>中规定的的 URI，而无视原先请求的方法。 在 RFC2616 中有相关的这样一段原文：</p>
 <blockquote>
 <p>Note: Many pre-HTTP/1.1 user agents do not understand the 303 status. When interoperability with such clients is a concern, the 302 status code may be used instead, since most user agents react to a 302 response as described here for 303.</p>
 </blockquote>
-<h3 id="304-Not-Modified"><a href="#304-Not-Modified" class="headerlink" title="304 Not Modified"></a>304 Not Modified</h3><p>该状态码表示客户端发送附带条件请求时，服务器端允许请求访问资源，但未满足条件的情况。304 状态码返回时，不包含任何响应的主题部分。附带条件的请求指的是采用 GET 方法的请求头中包含：<code>If-Match</code>、<code>If-Modified-Since</code>、<code>If-None-Match</code>、<code>If-Range</code>、<code>If-Unmodified-Since</code> 中任一首部。</p>
+<h3 id="304-Not-Modified"><a href="#304-Not-Modified" class="headerlink" title="304 Not Modified"></a>304 Not Modified</h3><p>该状态码表示客户端发送附带条件请求时，服务器端允许请求访问资源，但未满足条件的情况。304 状态码返回时，不包含任何响应的主题部分。附带条件的请求指的是采用 GET 方法的请求头中包含：<code>If-Match</code>、<code>If-Modified-Since</code>、<code>If-None-Match</code>、<code>If-Range</code>、<code>If-Unmodified-Since</code>中任一首部。</p>
 <h3 id="307-Temporary-Redirect"><a href="#307-Temporary-Redirect" class="headerlink" title="307 Temporary Redirect"></a>307 Temporary Redirect</h3><p>临时重定向。该状态码与 302 和 303 的有着类似的含义，不同之处在于，307 状态码并不会指定客户端要用什么样的请求方法请求重定向地址。(302 指定使用原有请求方法，303 指定使用 GET 方法)</p>
 <h2 id="4XX-Client-Error"><a href="#4XX-Client-Error" class="headerlink" title="4XX Client Error"></a>4XX Client Error</h2><blockquote>
 <p>The 4xx class of status code is intended for cases in which the client seems to have erred.</p>
 </blockquote>
 <p>4XX 的响应结果表明客户端是发生错误的原因所在</p>
 <h3 id="400-Bad-Request"><a href="#400-Bad-Request" class="headerlink" title="400 Bad Request"></a>400 Bad Request</h3><p>表示该请求报文中存在语法错误，导致服务器无法理解该请求。客户端需要修改请求的内容后再次发送请求。</p>
-<h3 id="401-Unauthorized"><a href="#401-Unauthorized" class="headerlink" title="401 Unauthorized"></a>401 Unauthorized</h3><p>该状态码表示发送的请求需要有通过 HTTP 认证 (Basic 认证，Digest 认证) 的认证信息。返回含有 401 的响应，必须在头部包含 <code>WWW-Authenticate</code> 以指明服务器需要哪种方式的认证。 当客户端再次请求该资源的时候，需要在请求头中的 <code>Authorization</code> 包含认证信息。 更多关于认证授权的信息关注 RFC2617</p>
+<h3 id="401-Unauthorized"><a href="#401-Unauthorized" class="headerlink" title="401 Unauthorized"></a>401 Unauthorized</h3><p>该状态码表示发送的请求需要有通过 HTTP 认证 (Basic 认证，Digest 认证) 的认证信息。返回含有 401 的响应，必须在头部包含<code>WWW-Authenticate</code>以指明服务器需要哪种方式的认证。 当客户端再次请求该资源的时候，需要在请求头中的<code>Authorization</code>包含认证信息。 更多关于认证授权的信息关注 RFC2617</p>
 <h3 id="403-Forbidden"><a href="#403-Forbidden" class="headerlink" title="403 Forbidden"></a>403 Forbidden</h3><p>该状态码表明对请求资源的访问被服务器拒绝了。服务器没有必要给出拒绝的详细理由，但如果想做说明的话，可以在实体的主体部分原因进行描述，这样就能让用户看到了。 未获得文件系统的访问权限，访问权限出现某些问题，从未授权的发送源 IP 地址试图访问等情况都可能发生 403 响应。</p>
 <h3 id="404-Not-Found"><a href="#404-Not-Found" class="headerlink" title="404 Not Found"></a>404 Not Found</h3><p>该状态码表明服务器上无法找到指定的资源。通常被用于服务器不想透露拒绝请求的原因，或者没有其他的响应可提供。</p>
 <h2 id="5XX-Server-Error"><a href="#5XX-Server-Error" class="headerlink" title="5XX Server Error"></a>5XX Server Error</h2><blockquote>
@@ -442,7 +415,7 @@ window.addEventListener('load', () => {
 </blockquote>
 <p>5XX 的响应结果表明服务器本身发生错误，或者没有足够的能力来处理请求。</p>
 <h3 id="500-Internal-Server-Error"><a href="#500-Internal-Server-Error" class="headerlink" title="500 Internal Server Error"></a>500 Internal Server Error</h3><p>该状态码表明服务器端在执行请求时发生了错误。也有可能是 Web 应用存在的 BUG 或某些临时的故障。</p>
-<h3 id="503-Service-Unavailable"><a href="#503-Service-Unavailable" class="headerlink" title="503 Service Unavailable"></a>503 Service Unavailable</h3><p>该状态码表明服务器暂时处于超负载或正在进行停机维护，现在无法处理请求。如果事先得知解除以上需要的时间，最好写入 <code>Retry-After</code> 首部字段再返回给客户端。</p>
+<h3 id="503-Service-Unavailable"><a href="#503-Service-Unavailable" class="headerlink" title="503 Service Unavailable"></a>503 Service Unavailable</h3><p>该状态码表明服务器暂时处于超负载或正在进行停机维护，现在无法处理请求。如果事先得知解除以上需要的时间，最好写入<code>Retry-After</code>首部字段再返回给客户端。</p>
 <blockquote>
 <p>转载自：<span class="exturl" data-url="aHR0cDovL2h1YW5nLWplcnJ5Yy5jb20vMjAxNi8wNS8yMi8lRTMlODAlOEMlRTclOTAlODYlRTglQTclQTNIVFRQJUUzJTgwJThEJUU0JUI5JThCJUU1JUI4JUI4JUU4JUE3JTgxJUU3JTlBJTg0JUU3JThBJUI2JUU2JTgwJTgxJUU3JUEwJTgxLw==">点击进入<i class="fa fa-external-link-alt"></i></span></p>
 </blockquote>
@@ -452,17 +425,6 @@ window.addEventListener('load', () => {
     
     
     
-      
-  <div class="popular-posts-header">相关文章</div>
-  <ul class="popular-posts">
-    <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/articles/7124.html" rel="bookmark">HTTPS 的 7 个误解</a></div>
-    </li>
-    <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/articles/56430.html" rel="bookmark">全面理解 HTTP</a></div>
-    </li>
-  </ul>
-
 
     <footer class="post-footer">
           
@@ -477,7 +439,7 @@ window.addEventListener('load', () => {
       <a href="https://www.bytelife.net/articles/54533.html" title="HTTP 常见状态码解释">https://www.bytelife.net/articles/54533.html</a>
   </li>
   <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
   </li>
 </ul>
 </div>
@@ -491,12 +453,12 @@ window.addEventListener('load', () => {
           <div class="post-nav">
             <div class="post-nav-item">
                 <a href="/articles/65492.html" rel="prev" title="HashMap 多线程并发问题分析">
-                  <i class="fa fa-chevron-left"></i> HashMap 多线程并发问题分析
+                  <i class="fa fa-angle-left"></i> HashMap 多线程并发问题分析
                 </a>
             </div>
             <div class="post-nav-item">
                 <a href="/articles/56430.html" rel="next" title="全面理解 HTTP">
-                  全面理解 HTTP <i class="fa fa-chevron-right"></i>
+                  全面理解 HTTP <i class="fa fa-angle-right"></i>
                 </a>
             </div>
           </div>
@@ -509,7 +471,7 @@ window.addEventListener('load', () => {
 
 
 
-    <div class="comments" id="waline-comments"></div><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.4.0/source/js/comments.min.js"></script>
+    <div class="comments" id="waline"></div>
 </div>
   </main>
 
@@ -517,97 +479,63 @@ window.addEventListener('load', () => {
     <div class="footer-inner">
 
   <div class="beian"><span class="exturl" data-url="aHR0cHM6Ly9iZWlhbi5taWl0Lmdvdi5jbg==">粤ICP备20059294号 </span>
-      <img src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/images/beian.png"><span class="exturl" data-url="aHR0cDovL3d3dy5iZWlhbi5nb3YuY24vcG9ydGFsL3JlZ2lzdGVyU3lzdGVtSW5mbz9yZWNvcmRjb2RlPTQ0MDMwNTAyMDA1NzM1">粤公⽹安备44030502005735号 </span>
+      <img src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/images/beian.png" alt=""><span class="exturl" data-url="aHR0cHM6Ly9iZWlhbi5tcHMuZ292LmNuLyMvcXVlcnkvd2ViU2VhcmNoP2NvZGU9NDQwMzA1MDIwMDU3MzU=">粤公⽹安备44030502005735号 </span>
   </div>
-
-<div class="copyright">
-  &copy; 2015 – 
-  <span itemprop="copyrightYear">2021</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Jeffrey</span>
-</div>
+  <div class="copyright">
+    &copy; 2015 – 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Jeffrey</span>
+  </div>
 <div class="wordcount">
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">125k</span>
+    <span title="站点总字数">78k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">10:27</span>
+    <span title="站点阅读时长">13:04</span>
   </span>
-</div>
-<div class="busuanzi-count">
-    <span class="post-meta-item" id="busuanzi_container_site_uv">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-user"></i>
-      </span>
-      <span class="site-uv" title="总访客量">
-        <span id="busuanzi_value_site_uv"></span>
-      </span>
-    </span>
-    <span class="post-meta-item" id="busuanzi_container_site_pv">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-eye"></i>
-      </span>
-      <span class="site-pv" title="总访问量">
-        <span id="busuanzi_value_site_pv"></span>
-      </span>
-    </span>
 </div>
 
     </div>
   </footer>
 
   
-  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.5.0/pjax.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.4.0/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.4.0/source/js/motion.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.4.0/source/js/next-boot.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.4.0/source/js/pjax.min.js"></script>
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
 
-  
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.4.0/source/js/third-party/search/local-search.min.js"></script>
-
-
-
-
-  <script class="next-config" data-name="mermaid" type="application/json">{&quot;enable&quot;:true,&quot;theme&quot;:&quot;forest&quot;,&quot;js&quot;:&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;mermaid@8.9.3&#x2F;dist&#x2F;mermaid.min.js&quot;}</script>
-  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.4.0/source/js/third-party/tags/mermaid.min.js"></script>
-
-  <script class="next-config" data-name="nprogress" type="application/json">{&quot;enable&quot;:true,&quot;spinner&quot;:true}</script>
-  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.4.0/source/js/third-party/nprogress.min.js"></script>
-
-  
-  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-
-
-
-  
-
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.3/dist/katex.min.css">
-
-
-  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.1.0/dist/quicklink.umd.js"></script>
-  <script class="next-config" data-name="quicklink" type="application/json">{&quot;enable&quot;:true,&quot;home&quot;:false,&quot;archive&quot;:false,&quot;delay&quot;:true,&quot;timeout&quot;:3000,&quot;priority&quot;:true,&quot;ignores&quot;:null,&quot;url&quot;:&quot;https:&#x2F;&#x2F;www.bytelife.net&#x2F;articles&#x2F;54533.html&quot;}</script>
-  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.4.0/source/js/third-party/quicklink.min.js"></script>
-<script class="next-config" data-name="waline" type="application/json">{&quot;lang&quot;:&quot;zh-cn&quot;,&quot;enable&quot;:true,&quot;serverURL&quot;:&quot;https:&#x2F;&#x2F;waline.bytelife.net&quot;,&quot;placeholder&quot;:&quot;填写昵称、邮箱即可留下你的观点与想法，邮件通知新回复。&quot;,&quot;avatar&quot;:&quot;mm&quot;,&quot;meta&quot;:[&quot;nick&quot;,&quot;mail&quot;,&quot;link&quot;],&quot;pageSize&quot;:10,&quot;visitor&quot;:false,&quot;comment_count&quot;:false,&quot;requiredFields&quot;:[&quot;nick&quot;,&quot;mail&quot;],&quot;libUrl&quot;:&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;@waline&#x2F;client&#x2F;dist&#x2F;Waline.min.js&quot;,&quot;langMode&quot;:{&quot;admin&quot;:&quot;博主&quot;,&quot;nick&quot;:&quot;昵称（必填）&quot;,&quot;mail&quot;:&quot;邮箱（必填）&quot;,&quot;link&quot;:&quot;网址（https:&#x2F;&#x2F; 选填）&quot;},&quot;el&quot;:&quot;#waline-comments&quot;,&quot;path&quot;:&quot;&#x2F;articles&#x2F;54533.html&quot;}</script>
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-CN","enable":true,"serverURL":"https://waline.bytelife.net","cssUrl":"https://unpkg.com/@waline/client@v3/dist/waline.css","commentCount":true,"pageview":false,"placeholder":"填写昵称、邮箱即可留下你的观点与想法，邮件通知新回复。","meta":["nick","mail","link"],"pageSize":10,"visitor":false,"requiredMeta":["nick","mail"],"libUrl":"https://unpkg.com/@waline/client@v3/dist/waline.js","el":"#waline","comment":true,"path":"/articles/54533.html"}</script>
+<link rel="stylesheet" href="https://unpkg.com/@waline/client@v3/dist/waline.css">
 <script>
 document.addEventListener('page:loaded', () => {
-  NexT.utils.loadComments(CONFIG.waline.el).then(() => 
+  NexT.utils.loadComments(CONFIG.waline.el).then(() =>
     NexT.utils.getScript(CONFIG.waline.libUrl, { condition: window.Waline })
-  ).then(() => {
-    new Waline(CONFIG.waline);
-  });
+  ).then(() => 
+    Waline.init(Object.assign({}, CONFIG.waline,{ el: document.querySelector(CONFIG.waline.el) }))
+  );
 });
 </script>
+
 </body>
 </html>

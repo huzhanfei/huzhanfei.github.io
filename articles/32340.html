@@ -2,12 +2,11 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.4.0">
-
-<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.1">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/images/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/images/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/images/favicon-16x16.png">
@@ -19,16 +18,15 @@
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/css/main.css">
 
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Righteous:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.css">
-  <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.js"></script>
 
-<script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;www.bytelife.net&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;huzhanfei&#x2F;blog-assets&#x2F;images&quot;,&quot;scheme&quot;:&quot;Gemini&quot;,&quot;version&quot;:&quot;8.4.0&quot;,&quot;exturl&quot;:true,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:true,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:true,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:true,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;none&quot;,&quot;post_body&quot;:&quot;none&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;搜索...&quot;,&quot;empty&quot;:&quot;没有找到任何搜索结果：${query}&quot;,&quot;hits_time&quot;:&quot;找到 ${hits} 个搜索结果（用时 ${time} 毫秒）&quot;,&quot;hits&quot;:&quot;找到 ${hits} 个搜索结果&quot;},&quot;path&quot;:&quot;&#x2F;search.json&quot;,&quot;localsearch&quot;:{&quot;enable&quot;:true,&quot;trigger&quot;:&quot;auto&quot;,&quot;top_n_per_article&quot;:1,&quot;unescape&quot;:false,&quot;preload&quot;:false}}</script>
-<meta name="description" content="问题： 给定数组 arr，arr 中的所有的值都为正数且不重复。每个值代表一种面值的货币，每种面值的货币可以使用任意张，再给定一个整数 aim 代表要找的钱数，求换钱有多少种方法。">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.css" integrity="sha256-gkQVf8UKZgQ0HyuxL/VnacadJ+D2Kox2TCEBuNQg5+w=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.bytelife.net","root":"/","images":"https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/images","scheme":"Gemini","darkmode":true,"version":"8.26.0","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"atom-one-light","dark":"atom-one-dark"},"prism":{"light":"prism-tomorrow","dark":"prism-tomorrow"},"copy_button":{"enable":true,"style":"mac"},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/config.js" defer></script>
+
+    <meta name="description" content="问题： 给定数组 arr，arr 中的所有的值都为正数且不重复。每个值代表一种面值的货币，每种面值的货币可以使用任意张，再给定一个整数 aim 代表要找的钱数，求换钱有多少种方法。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="动态规划算法问题（经典找零案例）">
 <meta property="og:url" content="https://www.bytelife.net/articles/32340.html">
@@ -49,11 +47,52 @@
 <link rel="canonical" href="https://www.bytelife.net/articles/32340.html">
 
 
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.bytelife.net/articles/32340.html","path":"articles/32340.html","title":"动态规划算法问题（经典找零案例）"}</script>
 
-<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;zh-CN&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;https:&#x2F;&#x2F;www.bytelife.net&#x2F;articles&#x2F;32340.html&quot;,&quot;path&quot;:&quot;articles&#x2F;32340.html&quot;,&quot;title&quot;:&quot;动态规划算法问题（经典找零案例）&quot;}</script>
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>动态规划算法问题（经典找零案例） | ByteLife</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-190433082-1"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-190433082-1","only_pageview":false,"measure_protocol_api_secret":null}</script>
+  <script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/third-party/analytics/google-analytics.js" defer></script>
 
-<script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
-<title>动态规划算法问题（经典找零案例） | ByteLife</title><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.4.0/source/js/config.min.js"></script><link rel="dns-prefetch" href="https://waline.bytelife.net">
+  <script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/third-party/analytics/baidu-analytics.js" defer></script>
+  <script async src="https://hm.baidu.com/hm.js?ac759e323761a6cf4dc954a77df30b81"></script>
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.umd.js" integrity="sha256-a+H7FYzJv6oU2hfsfDGM2Ohw/cR9v+hPfxHCLdmCrE8=" crossorigin="anonymous" defer></script>
+<script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/utils.js" defer></script><script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/motion.js" defer></script><script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/sidebar.js" defer></script><script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/next-boot.js" defer></script><script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/pjax.js" defer></script>
+
+  
+
+
+
+  <script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/third-party/fancybox.js" defer></script>
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css" integrity="sha256-UF1fgpAiu3tPJN/uCqEUHNe7pnr+QR0SQDNfgglgtcM=" crossorigin="anonymous">
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/3.0.1/quicklink.umd.js" integrity="sha256-44BednzIpUeQJcY8qtLyarFu0UCCTbgmWOvaoehiFQQ=" crossorigin="anonymous" defer></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":false,"delay":true,"timeout":3000,"priority":true,"url":"https://www.bytelife.net/articles/32340.html"}</script>
+  <script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/third-party/quicklink.js" defer></script>
+<link rel="dns-prefetch" href="https://waline.bytelife.net">
 <meta name="keywords" content="java,算法,动态规划,经典找零,找零,dynamic,algorithm,暴力,时间复杂度,ByteLife,Jeffrey" />
 
 
@@ -97,16 +136,6 @@ window.addEventListener('load', () => {
     s.parentNode.insertBefore(el, s);
 })();
 </script>
-  
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-190433082-1"></script>
-  <script class="next-config" data-name="google_analytics" type="application/json">{&quot;tracking_id&quot;:&quot;UA-190433082-1&quot;,&quot;only_pageview&quot;:false}</script>
-  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.4.0/source/js/third-party/analytics/google-analytics.min.js"></script>
-
-  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.4.0/source/js/third-party/analytics/baidu-analytics.min.js"></script>
-  <script async src="https://hm.baidu.com/hm.js?ac759e323761a6cf4dc954a77df30b81"></script>
-
-
-
   <noscript>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/css/noscript.css">
   </noscript>
@@ -117,8 +146,8 @@ window.addEventListener('load', () => {
   <div class="headband"></div>
 
   <main class="main">
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="切换导航栏" role="button">
         <span class="toggle-line"></span>
@@ -131,7 +160,7 @@ window.addEventListener('load', () => {
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">ByteLife</h1>
+      <p class="site-title">ByteLife</p>
       <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">技术交流与学习自留地</p>
@@ -139,8 +168,7 @@ window.addEventListener('load', () => {
   </div>
 
   <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-        <i class="fa fa-search fa-fw fa-lg"></i>
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
     </div>
   </div>
 </div>
@@ -148,53 +176,16 @@ window.addEventListener('load', () => {
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu">
-        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>本站首页</a></li>
-        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于本站</a></li>
-        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>文章分类</a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>时间轴</a></li>
-        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签云</a></li>
-      <li class="menu-item menu-item-search">
-        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
-        </a>
-      </li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>本站首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于本站</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>文章分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>时间轴</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签云</a></li>
   </ul>
 </nav>
 
 
 
-  <div class="search-pop-overlay">
-    <div class="popup search-popup"><div class="search-header">
-  <span class="search-icon">
-    <i class="fa fa-search"></i>
-  </span>
-  <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off" maxlength="80"
-           placeholder="搜索..." spellcheck="false"
-           type="search" class="search-input">
-  </div>
-  <span class="popup-btn-close" role="button">
-    <i class="fa fa-times-circle"></i>
-  </span>
-</div>
-<div class="search-result-container no-result">
-  <div class="search-result-icon">
-    <i class="fa fa-spinner fa-pulse fa-5x"></i>
-  </div>
-</div>
 
-    </div>
-  </div>
-
-</div>
+</header>
         
   
-  <div class="toggle sidebar-toggle" role="button">
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-  </div>
-
   <aside class="sidebar">
 
     <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
@@ -215,36 +206,33 @@ window.addEventListener('load', () => {
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="Jeffrey"
       src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/images/avatar.jpg">
   <p class="site-author-name" itemprop="name">Jeffrey</p>
   <div class="site-description" itemprop="description">专注于Java、Go、网络、网站、数码设备等技术交流与学习的个人博客</div>
 </div>
-<div class="site-state-wrap site-overview-item animated">
+<div class="site-state-wrap animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
+        <a href="/archives/">
           <span class="site-state-item-count">46</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
+          <a href="/categories/">
         <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
+          <a href="/tags/">
         <span class="site-state-item-count">27</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
-  <div class="links-of-author site-overview-item animated">
+  <div class="links-of-author animated">
       <span class="links-of-author-item">
         <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2h1emhhbmZlaQ==" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;huzhanfei"><i class="fab fa-github fa-fw"></i></span>
       </span>
@@ -252,35 +240,24 @@ window.addEventListener('load', () => {
         <span class="exturl" data-url="bWFpbHRvOmh1emhhbmZlaUBvdXRsb29rLmNvbQ==" title="E-Mail → mailto:huzhanfei@outlook.com"><i class="fa fa-envelope fa-fw"></i></span>
       </span>
       <span class="links-of-author-item">
-        <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fa fa-rss fa-fw"></i></a>
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml" rel="noopener me"><i class="fa fa-rss fa-fw"></i></a>
       </span>
   </div>
-  <div class="cc-license site-overview-item animated" itemprop="license">
-    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><img src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/images/cc-by-nc-sa.svg" alt="Creative Commons"></span>
+  <div class="cc-license animated" itemprop="license">
+    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></span>
   </div>
-
-
 
         </div>
       </div>
     </div>
-  </aside>
-  <div class="sidebar-dimmer"></div>
-
-
-    </header>
 
     
-  <div class="back-to-top" role="button" aria-label="返回顶部">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-  <div class="reading-progress-bar"></div>
+        <div class="pjax">
+        </div>
+  </aside>
 
-<noscript>
-  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
-</noscript>
 
+    </div>
 
     <div class="main-inner post posts-expand">
 
@@ -298,11 +275,16 @@ window.addEventListener('load', () => {
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/images/avatar.jpg">
       <meta itemprop="name" content="Jeffrey">
-      <meta itemprop="description" content="专注于Java、Go、网络、网站、数码设备等技术交流与学习的个人博客">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="ByteLife">
+      <meta itemprop="description" content="专注于Java、Go、网络、网站、数码设备等技术交流与学习的个人博客">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="动态规划算法问题（经典找零案例） | ByteLife">
+      <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -330,13 +312,6 @@ window.addEventListener('load', () => {
     </span>
 
   
-    <span class="post-meta-item" title="阅读" id="busuanzi_container_page_pv">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读：</span>
-      <span id="busuanzi_value_page_pv"></span>
-    </span>
   
   <span class="post-meta-item">
     
@@ -345,27 +320,26 @@ window.addEventListener('load', () => {
     </span>
     <span class="post-meta-item-text">评论：</span>
   
-    <a title="waline" href="/articles/32340.html#waline-comments" itemprop="discussionUrl">
-      <span class="post-comments-count waline-comment-count" id="/articles/32340.html" data-xid="/articles/32340.html" itemprop="commentCount"></span>
+    <a title="waline" href="/articles/32340.html#waline" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" data-path="/articles/32340.html" itemprop="commentCount"></span>
     </a>
   </span>
   
   
-      </div>
-      <div class="post-meta">
+    <span class="post-meta-break"></span>
     <span class="post-meta-item" title="本文字数">
       <span class="post-meta-item-icon">
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>2.7k</span>
+      <span>2.1k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>13 分钟</span>
+      <span>21 分钟</span>
     </span>
 </div>
 
@@ -375,76 +349,75 @@ window.addEventListener('load', () => {
     
     
     
-    <div class="post-body" itemprop="articleBody">
-        <p>问题： 给定数组 arr，arr 中的所有的值都为正数且不重复。每个值代表一种面值的货币，每种面值的货币可以使用任意张，再给定一个整数 aim 代表要找的钱数，求换钱有多少种方法。</p>
+    <div class="post-body" itemprop="articleBody"><p>问题： 给定数组 arr，arr 中的所有的值都为正数且不重复。每个值代表一种面值的货币，每种面值的货币可以使用任意张，再给定一个整数 aim 代表要找的钱数，求换钱有多少种方法。</p>
 <span id="more"></span>
 
-<h2 id="暴力搜索方法"><a href="#暴力搜索方法" class="headerlink" title="暴力搜索方法"></a>暴力搜索方法</h2><h3 id="思路分析"><a href="#思路分析" class="headerlink" title="思路分析"></a>思路分析</h3><p>若给定 arr={5, 10, 25, 1}，aim=1000。</p>
+<h2 id="暴力搜索方法"><a href="#暴力搜索方法" class="headerlink" title="暴力搜索方法"></a>暴力搜索方法</h2><h3 id="思路分析"><a href="#思路分析" class="headerlink" title="思路分析"></a>思路分析</h3><p>若给定 arr={5, 10, 25, 1}，aim = 1000。</p>
 <ul>
-<li>  用 0 张 5 元的货币，让 [10, 25, 1] 组成剩下的 1000 元，最终方法数记作 ——res1；</li>
-<li>  用 1 张 5 元的货币，让 [10, 25, 1] 组成剩下的 995 元，最终方法数记作 ——res2；</li>
-<li>  用 2 张 5 元的货币，让 [10, 25, 1] 组成剩下的 990 元，最终方法数记作 ——res3；</li>
-<li>  用 3 张 5 元的货币，让 [10, 25, 1] 组成剩下的 985 元，最终方法数记作 ——res4；</li>
-<li>  ……</li>
-<li>  用 200 张 5 元的货币，让 [10, 25, 1] 组成剩下的 0 元，最终方法数记作 ——res201；</li>
+<li>用 0 张 5 元的货币，让 [10, 25, 1] 组成剩下的 1000 元，最终方法数记作 ——res1；</li>
+<li>用 1 张 5 元的货币，让 [10, 25, 1] 组成剩下的 995 元，最终方法数记作 ——res2；</li>
+<li>用 2 张 5 元的货币，让 [10, 25, 1] 组成剩下的 990 元，最终方法数记作 ——res3；</li>
+<li>用 3 张 5 元的货币，让 [10, 25, 1] 组成剩下的 985 元，最终方法数记作 ——res4；</li>
+<li>……</li>
+<li>用 200 张 5 元的货币，让 [10, 25, 1] 组成剩下的 0 元，最终方法数记作 ——res201；</li>
 </ul>
 <p>则 res1、res2……res201 的累加和即为最终的结果。</p>
 <h3 id="具体实现"><a href="#具体实现" class="headerlink" title="具体实现"></a>具体实现</h3><p>定义递归函数：<code>int process1(arr, index, aim)</code>, 它的含义是如果用 arr [index……N-1] 这些面值的钱组成 aim，返回总的方法数。</p>
-<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">coins1</span><span class="params">(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> aim)</span> </span>{</span><br><span class="line">    <span class="keyword">long</span> startTime = System.currentTimeMillis();</span><br><span class="line">    <span class="keyword">if</span> (arr == <span class="keyword">null</span> || arr.length == <span class="number">0</span> || aim &lt; <span class="number">0</span>) {</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">int</span> result = process1(arr,<span class="number">0</span>,aim);</span><br><span class="line">    <span class="keyword">long</span> endTime = System.currentTimeMillis();</span><br><span class="line">    System.out.println(<span class="string">"暴力搜索方法所用时间："</span> + (endTime - startTime) +<span class="string">"ms"</span>);</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">}</span><br><span class="line">    </span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">process1</span><span class="params">(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> index, <span class="keyword">int</span> aim)</span> </span>{</span><br><span class="line">    <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">    <span class="comment">// 判断是否所有面值的货币均已经计算完</span></span><br><span class="line">    <span class="keyword">if</span> (index == arr.length) {</span><br><span class="line">        <span class="comment">// 判断本次递归调用时钱的总数是否已经凑够，如果已经凑够则将总方法数加1</span></span><br><span class="line">        res = aim == <span class="number">0</span> ? <span class="number">1</span> : <span class="number">0</span>; </span><br><span class="line">    } <span class="keyword">else</span> { </span><br><span class="line">        <span class="comment">// 循环计算i张当前面值的货币</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; arr[index] * i &lt;= aim; i++) {</span><br><span class="line">            <span class="comment">// 递归调用当使用i张当前面值的货币时，用其它货币组成剩下的钱</span></span><br><span class="line">            res += process1(arr, index + <span class="number">1</span>, aim - arr[index] * i);</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">coins1</span><span class="params">(<span class="type">int</span>[] arr, <span class="type">int</span> aim)</span> {</span><br><span class="line">    <span class="type">long</span> <span class="variable">startTime</span> <span class="operator">=</span> System.currentTimeMillis();</span><br><span class="line">    <span class="keyword">if</span> (arr == <span class="literal">null</span> || arr.length == <span class="number">0</span> || aim &lt; <span class="number">0</span>) {</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    }</span><br><span class="line">    <span class="type">int</span> <span class="variable">result</span> <span class="operator">=</span> process1(arr,<span class="number">0</span>,aim);</span><br><span class="line">    <span class="type">long</span> <span class="variable">endTime</span> <span class="operator">=</span> System.currentTimeMillis();</span><br><span class="line">    System.out.println(<span class="string">"暴力搜索方法所用时间："</span> + (endTime - startTime) +<span class="string">"ms"</span>);</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">}</span><br><span class="line">    </span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">process1</span><span class="params">(<span class="type">int</span>[] arr, <span class="type">int</span> index, <span class="type">int</span> aim)</span> {</span><br><span class="line">    <span class="type">int</span> <span class="variable">res</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">    <span class="comment">// 判断是否所有面值的货币均已经计算完</span></span><br><span class="line">    <span class="keyword">if</span> (index == arr.length) {</span><br><span class="line">        <span class="comment">// 判断本次递归调用时钱的总数是否已经凑够，如果已经凑够则将总方法数加1</span></span><br><span class="line">        res = aim == <span class="number">0</span> ? <span class="number">1</span> : <span class="number">0</span>; </span><br><span class="line">    } <span class="keyword">else</span> { </span><br><span class="line">        <span class="comment">// 循环计算i张当前面值的货币</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; arr[index] * i &lt;= aim; i++) {</span><br><span class="line">            <span class="comment">// 递归调用当使用i张当前面值的货币时，用其它货币组成剩下的钱</span></span><br><span class="line">            res += process1(arr, index + <span class="number">1</span>, aim - arr[index] * i);</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
 <p>暴力搜索方法比较好理解，但他在计算中存在大量的重复递归过程。 例如已经使用了 0 张 5 元和 1 张 10 元货币的情况下，后续将求： <code>process1(arr,2,990)</code> 而当计算使用 2 张 5 元和 0 张 10 元时，后续同样需要求： <code>process1(arr,2,990)</code> 因此这种重复的递归运算将造成大量的时间浪费。</p>
 <h2 id="记忆搜索方法"><a href="#记忆搜索方法" class="headerlink" title="记忆搜索方法"></a>记忆搜索方法</h2><h3 id="思路分析-1"><a href="#思路分析-1" class="headerlink" title="思路分析"></a>思路分析</h3><p>由于暴力搜索方法中存在大量的重复递归，因此我们可以使用一个 “记忆库” 用于存储已经计算过的值，在本题中，使用 index 货币组成剩下的 aim 钱的值是一一对应的，因此可以使用 int mem [index][aim] 数组表示记忆库，其元素值为可以组成的方法数。</p>
 <h3 id="具体实现-1"><a href="#具体实现-1" class="headerlink" title="具体实现"></a>具体实现</h3><ul>
-<li>  每计算完一个 process (index,aim)，都将结果放入 mem 中，index 和 aim 组成共同的 key，返回结果为 value。</li>
-<li>  要进入一个递归过程时，先以 index 和 aim 组成的 key 在 mem 中进行查询，如果已经存在 value，则直接使用，如果不存在，再进入递归过程。</li>
+<li>每计算完一个 process (index,aim)，都将结果放入 mem 中，index 和 aim 组成共同的 key，返回结果为 value。</li>
+<li>要进入一个递归过程时，先以 index 和 aim 组成的 key 在 mem 中进行查询，如果已经存在 value，则直接使用，如果不存在，再进入递归过程。</li>
 </ul>
-<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">process2</span><span class="params">(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> index, <span class="keyword">int</span> aim, <span class="keyword">int</span>[][] mem)</span> </span>{</span><br><span class="line">    <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">    <span class="comment">// 判断是否所有面值的货币均已经计算完</span></span><br><span class="line">    <span class="keyword">if</span> (index == arr.length) {</span><br><span class="line">        <span class="comment">// 判断本次递归调用时钱的总数是否已经凑够，如果已经凑够则将总方法数加1</span></span><br><span class="line">        res = aim == <span class="number">0</span> ? <span class="number">1</span> : <span class="number">0</span>;</span><br><span class="line">    } <span class="keyword">else</span> {</span><br><span class="line">        <span class="keyword">int</span> memVal = <span class="number">0</span>;</span><br><span class="line">        <span class="comment">// 循环计算i张当前面值的货币</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; arr[index] * i &lt;= aim; i++) {</span><br><span class="line">            <span class="comment">// 获取记忆库中当使用i张index货币时，用其它货币组成剩下的钱</span></span><br><span class="line">            memVal = mem[index + <span class="number">1</span>][aim - arr[index] * i];</span><br><span class="line">            <span class="comment">// 判断记忆库中存在记录</span></span><br><span class="line">            <span class="keyword">if</span> (memVal != <span class="number">0</span>) {</span><br><span class="line">                <span class="comment">// 将记忆库中的方法数累加到结果中</span></span><br><span class="line">                res += memVal == -<span class="number">1</span> ? <span class="number">0</span> : memVal;</span><br><span class="line">            } <span class="keyword">else</span> {</span><br><span class="line">                <span class="comment">// 递归调用当使用i张当前面值的货币时，用其它货币组成剩下的钱</span></span><br><span class="line">                res += process2(arr, index + <span class="number">1</span>, aim - arr[index] * i, mem);</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="comment">// 将使用index货币组成aim钱的结果存储到记忆库中</span></span><br><span class="line">    mem[index][aim] = res == <span class="number">0</span> ? -<span class="number">1</span> : res;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">process2</span><span class="params">(<span class="type">int</span>[] arr, <span class="type">int</span> index, <span class="type">int</span> aim, <span class="type">int</span>[][] mem)</span> {</span><br><span class="line">    <span class="type">int</span> <span class="variable">res</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">    <span class="comment">// 判断是否所有面值的货币均已经计算完</span></span><br><span class="line">    <span class="keyword">if</span> (index == arr.length) {</span><br><span class="line">        <span class="comment">// 判断本次递归调用时钱的总数是否已经凑够，如果已经凑够则将总方法数加1</span></span><br><span class="line">        res = aim == <span class="number">0</span> ? <span class="number">1</span> : <span class="number">0</span>;</span><br><span class="line">    } <span class="keyword">else</span> {</span><br><span class="line">        <span class="type">int</span> <span class="variable">memVal</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="comment">// 循环计算i张当前面值的货币</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; arr[index] * i &lt;= aim; i++) {</span><br><span class="line">            <span class="comment">// 获取记忆库中当使用i张index货币时，用其它货币组成剩下的钱</span></span><br><span class="line">            memVal = mem[index + <span class="number">1</span>][aim - arr[index] * i];</span><br><span class="line">            <span class="comment">// 判断记忆库中存在记录</span></span><br><span class="line">            <span class="keyword">if</span> (memVal != <span class="number">0</span>) {</span><br><span class="line">                <span class="comment">// 将记忆库中的方法数累加到结果中</span></span><br><span class="line">                res += memVal == -<span class="number">1</span> ? <span class="number">0</span> : memVal;</span><br><span class="line">            } <span class="keyword">else</span> {</span><br><span class="line">                <span class="comment">// 递归调用当使用i张当前面值的货币时，用其它货币组成剩下的钱</span></span><br><span class="line">                res += process2(arr, index + <span class="number">1</span>, aim - arr[index] * i, mem);</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="comment">// 将使用index货币组成aim钱的结果存储到记忆库中</span></span><br><span class="line">    mem[index][aim] = res == <span class="number">0</span> ? -<span class="number">1</span> : res;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
-<h2 id="动态规划方法"><a href="#动态规划方法" class="headerlink" title="动态规划方法"></a>动态规划方法</h2><h3 id="思路分析-2"><a href="#思路分析-2" class="headerlink" title="思路分析"></a>思路分析</h3><p>如果 arr 长度为 N，生成行数为 N，列数为 aim+1 的矩阵 dp。 dp [i][j] 的含义是在使用 arr [0]…arr [i] 货币的情况下，组成钱数 j 的方法数。<br><img src="https://cdn.jsdelivr.net/gh/huzhanfei/static@main/blog/images/2021/03/16138517477927.jpg"></p>
+<h2 id="动态规划方法"><a href="#动态规划方法" class="headerlink" title="动态规划方法"></a>动态规划方法</h2><h3 id="思路分析-2"><a href="#思路分析-2" class="headerlink" title="思路分析"></a>思路分析</h3><p>如果 arr 长度为 N，生成行数为 N，列数为 aim + 1 的矩阵 dp。 dp [i][j] 的含义是在使用 arr [0]…arr [i] 货币的情况下，组成钱数 j 的方法数。<br><img src="https://cdn.jsdelivr.net/gh/huzhanfei/static@main/blog/images/2021/03/16138517477927.jpg"></p>
 <ol>
-<li> 如果完全不用 arr [i] 货币，只使用 arr [0]…arr [i-1] 货币时，方法数为 dp [i-1][j]。</li>
-<li> 如果用 1 张 arr [i] 货币，剩下的钱使用 arr [0]…arr [i-1] 货币组成，方法数为 dp [i-1][j-1*arr [i]]。</li>
-<li> 如果用 2 张 arr [i] 货币，剩下的钱使用 arr [0]…arr [i-1] 货币组成，方法数为 dp [i-1][j-1*arr [i]]。</li>
-<li> 如果用 3 张 arr [i] 货币，剩下的钱使用 arr [0]…arr [i-1] 货币组成，方法数为 dp [i-1][j-1*arr [i]]。</li>
-<li> ……</li>
+<li>如果完全不用 arr [i] 货币，只使用 arr [0]…arr [i-1] 货币时，方法数为 dp [i-1][j]。</li>
+<li>如果用 1 张 arr [i] 货币，剩下的钱使用 arr [0]…arr [i-1] 货币组成，方法数为 dp [i-1][j-1*arr [i]]。</li>
+<li>如果用 2 张 arr [i] 货币，剩下的钱使用 arr [0]…arr [i-1] 货币组成，方法数为 dp [i-1][j-1*arr [i]]。</li>
+<li>如果用 3 张 arr [i] 货币，剩下的钱使用 arr [0]…arr [i-1] 货币组成，方法数为 dp [i-1][j-1*arr [i]]。</li>
+<li>……</li>
 </ol>
-<p>dp [i][j] 的值即为上述所有值得累加和。 求每一个位置都需要枚举，时间复杂度为 O (aim)。dp 一共有 N*aim 个位置，所以总的时间复杂度为 O (N*aim2) 最终的结果值即为矩阵最右下角的 dp [N-1][aim]。</p>
+<p>dp [i][j] 的值即为上述所有值得累加和。 求每一个位置都需要枚举，时间复杂度为 O (aim)。dp 一共有 N * aim 个位置，所以总的时间复杂度为 O (N * aim2) 最终的结果值即为矩阵最右下角的 dp [N-1][aim]。</p>
 <h4 id="记忆搜索方法与动态规划方法的联系"><a href="#记忆搜索方法与动态规划方法的联系" class="headerlink" title="记忆搜索方法与动态规划方法的联系"></a>记忆搜索方法与动态规划方法的联系</h4><ul>
-<li>  记忆化搜索方法就是某种形态的动态规划方法。</li>
-<li>  记忆化搜索不关心到达某一个递归路径的路程。只是单纯地堆计算过的递归过程进行记录，避免重复递归的过程。</li>
-<li>  动态规划方法则是规定好每一个递归霍城的计算顺序，一次进行计算，后面的计算过程严格依赖前面的计算过程。</li>
-<li>  两者都是空间换时间的方法，也有枚举的过程，区别在于动态规划规定计算顺序，而记忆搜索不用规定。</li>
+<li>记忆化搜索方法就是某种形态的动态规划方法。</li>
+<li>记忆化搜索不关心到达某一个递归路径的路程。只是单纯地堆计算过的递归过程进行记录，避免重复递归的过程。</li>
+<li>动态规划方法则是规定好每一个递归霍城的计算顺序，一次进行计算，后面的计算过程严格依赖前面的计算过程。</li>
+<li>两者都是空间换时间的方法，也有枚举的过程，区别在于动态规划规定计算顺序，而记忆搜索不用规定。</li>
 </ul>
 <h4 id="什么是动态规划方法"><a href="#什么是动态规划方法" class="headerlink" title="什么是动态规划方法"></a>什么是动态规划方法</h4><ul>
-<li>  本质是利用申请的空间来记录每一个暴力搜索的计算过程，下次要用结果的时候直接使用，而不再进行重复的递归过程。</li>
-<li>  动态规划规定每一种递归状态的计算顺序，依次进行计算。从简单到复杂，按顺序计算。</li>
+<li>本质是利用申请的空间来记录每一个暴力搜索的计算过程，下次要用结果的时候直接使用，而不再进行重复的递归过程。</li>
+<li>动态规划规定每一种递归状态的计算顺序，依次进行计算。从简单到复杂，按顺序计算。</li>
 </ul>
-<h3 id="具体实现-2"><a href="#具体实现-2" class="headerlink" title="具体实现"></a>具体实现</h3><figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">process3</span><span class="params">(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> aim)</span> </span>{</span><br><span class="line">    <span class="comment">// 创建dp矩阵</span></span><br><span class="line">    <span class="keyword">int</span>[][] dp = <span class="keyword">new</span> <span class="keyword">int</span>[arr.length][aim + <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; dp.length; i++) {</span><br><span class="line">        dp[i][<span class="number">0</span>] = <span class="number">1</span>; <span class="comment">// 凑成0元的方法必然是什么货币都不用，只有1种</span></span><br><span class="line">        <span class="keyword">if</span> (i == <span class="number">0</span>) {</span><br><span class="line">            <span class="comment">// 如果只是用arr[0]这一种货币，则能凑到j钱置1</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; dp[i].length; j++) {</span><br><span class="line">                dp[i][j] = j % arr[i] == <span class="number">0</span> ? <span class="number">1</span> : <span class="number">0</span>;</span><br><span class="line">            }</span><br><span class="line">        } <span class="keyword">else</span> {</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt; dp[i].length; j++) {</span><br><span class="line">                <span class="keyword">int</span> temp = <span class="number">0</span>;</span><br><span class="line">                <span class="comment">// 枚举使用k张arr[i]货币后dp[i-1]中组成剩下钱数的方法数</span></span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">0</span>; k * arr[i] &lt;= j; k++) {</span><br><span class="line">                    temp += dp[i - <span class="number">1</span>][j - k * arr[i]];<span class="comment">//方法数累加</span></span><br><span class="line">                }</span><br><span class="line">                dp[i][j] = temp;</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="comment">// 返回dp矩阵最右下角的值即为最后结果</span></span><br><span class="line">    <span class="keyword">return</span> dp[arr.length - <span class="number">1</span>][aim];</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="具体实现-2"><a href="#具体实现-2" class="headerlink" title="具体实现"></a>具体实现</h3><figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">process3</span><span class="params">(<span class="type">int</span>[] arr, <span class="type">int</span> aim)</span> {</span><br><span class="line">    <span class="comment">// 创建dp矩阵</span></span><br><span class="line">    <span class="type">int</span>[][] dp = <span class="keyword">new</span> <span class="title class_">int</span>[arr.length][aim + <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; dp.length; i++) {</span><br><span class="line">        dp[i][<span class="number">0</span>] = <span class="number">1</span>; <span class="comment">// 凑成0元的方法必然是什么货币都不用，只有1种</span></span><br><span class="line">        <span class="keyword">if</span> (i == <span class="number">0</span>) {</span><br><span class="line">            <span class="comment">// 如果只是用arr[0]这一种货币，则能凑到j钱置1</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">0</span>; j &lt; dp[i].length; j++) {</span><br><span class="line">                dp[i][j] = j % arr[i] == <span class="number">0</span> ? <span class="number">1</span> : <span class="number">0</span>;</span><br><span class="line">            }</span><br><span class="line">        } <span class="keyword">else</span> {</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">1</span>; j &lt; dp[i].length; j++) {</span><br><span class="line">                <span class="type">int</span> <span class="variable">temp</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">                <span class="comment">// 枚举使用k张arr[i]货币后dp[i-1]中组成剩下钱数的方法数</span></span><br><span class="line">                <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">k</span> <span class="operator">=</span> <span class="number">0</span>; k * arr[i] &lt;= j; k++) {</span><br><span class="line">                    temp += dp[i - <span class="number">1</span>][j - k * arr[i]];<span class="comment">//方法数累加</span></span><br><span class="line">                }</span><br><span class="line">                dp[i][j] = temp;</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="comment">// 返回dp矩阵最右下角的值即为最后结果</span></span><br><span class="line">    <span class="keyword">return</span> dp[arr.length - <span class="number">1</span>][aim];</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
-<h2 id="动态规划方法的再优化"><a href="#动态规划方法的再优化" class="headerlink" title="动态规划方法的再优化"></a>动态规划方法的再优化</h2><h3 id="思路分析-3"><a href="#思路分析-3" class="headerlink" title="思路分析"></a>思路分析</h3><p>由于动态规划方法的执行顺序有着严格的规定，因此使得对算法的进一步优化成为可能。 对于刚才的问题中，我们需要枚举 <code>dp[i-1][j-k*arr[i]]</code>(k=1,2,3…) 并与 <code>dp[i-1][j]</code> 累加，实际上 <code>dp[i-1][j-k*arr[i]]</code>(k=1,2,3…) 的累加值就是 <code>dp[i][j-arr[i]]</code>。<br><img src="https://cdn.jsdelivr.net/gh/huzhanfei/static@main/blog/images/2021/03/16138517699600.jpg"><br>所以可以简化为： <code>dp[i][j] = dp[i][j-arr[i]] + dp[i-1][j]</code> 从而彻底省略枚举过程。时间复杂度从 O (N<em>aim2) 变为 O (N</em>aim)</p>
+<h2 id="动态规划方法的再优化"><a href="#动态规划方法的再优化" class="headerlink" title="动态规划方法的再优化"></a>动态规划方法的再优化</h2><h3 id="思路分析-3"><a href="#思路分析-3" class="headerlink" title="思路分析"></a>思路分析</h3><p>由于动态规划方法的执行顺序有着严格的规定，因此使得对算法的进一步优化成为可能。 对于刚才的问题中，我们需要枚举<code>dp[i-1][j-k*arr[i]]</code> (k = 1,2,3…) 并与<code>dp[i-1][j]</code>累加，实际上<code>dp[i-1][j-k*arr[i]]</code> (k = 1,2,3…) 的累加值就是<code>dp[i][j-arr[i]]</code>。<br><img src="https://cdn.jsdelivr.net/gh/huzhanfei/static@main/blog/images/2021/03/16138517699600.jpg"><br>所以可以简化为： <code>dp[i][j] = dp[i][j-arr[i]] + dp[i-1][j]</code> 从而彻底省略枚举过程。时间复杂度从 O (N<em>aim2) 变为 O (N</em>aim)</p>
 <h3 id="具体实现-3"><a href="#具体实现-3" class="headerlink" title="具体实现"></a>具体实现</h3><p>经过优化后的代码实现如下：</p>
-<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">process4</span><span class="params">(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> aim)</span> </span>{</span><br><span class="line">    <span class="comment">// 创建dp矩阵</span></span><br><span class="line">    <span class="keyword">int</span>[][] dp = <span class="keyword">new</span> <span class="keyword">int</span>[arr.length][aim + <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; dp.length; i++) {</span><br><span class="line">        dp[i][<span class="number">0</span>] = <span class="number">1</span>; <span class="comment">// 凑成0元的方法必然是什么货币都不用，只有1种</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt; dp[i].length; j++) {</span><br><span class="line">            <span class="keyword">if</span> (i == <span class="number">0</span>) {</span><br><span class="line">                dp[i][j] = j % arr[i] == <span class="number">0</span> ? <span class="number">1</span> : <span class="number">0</span>;</span><br><span class="line">            } <span class="keyword">else</span> <span class="keyword">if</span>(j &gt;= arr[i]){</span><br><span class="line">                dp[i][j] = dp[i][j - arr[i]] + dp[i - <span class="number">1</span>][j];</span><br><span class="line">            } <span class="keyword">else</span> {</span><br><span class="line">                dp[i][j] = dp[i - <span class="number">1</span>][j];</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="comment">// 返回dp矩阵最右下角的值即为最后结果</span></span><br><span class="line">    <span class="keyword">return</span> dp[arr.length - <span class="number">1</span>][aim];</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">process4</span><span class="params">(<span class="type">int</span>[] arr, <span class="type">int</span> aim)</span> {</span><br><span class="line">    <span class="comment">// 创建dp矩阵</span></span><br><span class="line">    <span class="type">int</span>[][] dp = <span class="keyword">new</span> <span class="title class_">int</span>[arr.length][aim + <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; dp.length; i++) {</span><br><span class="line">        dp[i][<span class="number">0</span>] = <span class="number">1</span>; <span class="comment">// 凑成0元的方法必然是什么货币都不用，只有1种</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">1</span>; j &lt; dp[i].length; j++) {</span><br><span class="line">            <span class="keyword">if</span> (i == <span class="number">0</span>) {</span><br><span class="line">                dp[i][j] = j % arr[i] == <span class="number">0</span> ? <span class="number">1</span> : <span class="number">0</span>;</span><br><span class="line">            } <span class="keyword">else</span> <span class="keyword">if</span>(j &gt;= arr[i]){</span><br><span class="line">                dp[i][j] = dp[i][j - arr[i]] + dp[i - <span class="number">1</span>][j];</span><br><span class="line">            } <span class="keyword">else</span> {</span><br><span class="line">                dp[i][j] = dp[i - <span class="number">1</span>][j];</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="comment">// 返回dp矩阵最右下角的值即为最后结果</span></span><br><span class="line">    <span class="keyword">return</span> dp[arr.length - <span class="number">1</span>][aim];</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
 <h2 id="动态规划方法的空间优化"><a href="#动态规划方法的空间优化" class="headerlink" title="动态规划方法的空间优化"></a>动态规划方法的空间优化</h2><p>我们可以看到，经过优化的动态规划方法速度已经非常让人满意，但是它的空间浪费却很严重，我们发现动态规划方法是严格的矩阵从上至下、从左至右的方向顺序计算，那么其实真正每次计算式只需要用到的是当前行与当前行的上一行，因此其实我们可以将原本的 dp 二维矩阵简化为一维向量。 通过读取和修改向量本身的元素值来达到目的，修改后的代码如下所示：</p>
-<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">process5</span><span class="params">(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> aim)</span> </span>{</span><br><span class="line">    <span class="comment">// 创建dp向量</span></span><br><span class="line">    <span class="keyword">int</span>[] dp = <span class="keyword">new</span> <span class="keyword">int</span>[aim + <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr.length; i++) {</span><br><span class="line">        dp[<span class="number">0</span>] = <span class="number">1</span>; <span class="comment">// 凑成0元的方法必然是什么货币都不用，只有1种</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt; dp.length; j++) {</span><br><span class="line">            <span class="keyword">if</span> (i == <span class="number">0</span>) {</span><br><span class="line">                dp[j] = j % arr[i] == <span class="number">0</span> ? <span class="number">1</span> : <span class="number">0</span>;</span><br><span class="line">            } <span class="keyword">else</span> <span class="keyword">if</span>(j &gt;= arr[i]){</span><br><span class="line">                dp[j] += dp[j - arr[i]];</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="comment">// 返回dp向量尾元素即最终结果</span></span><br><span class="line">    <span class="keyword">return</span> dp[aim];</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">process5</span><span class="params">(<span class="type">int</span>[] arr, <span class="type">int</span> aim)</span> {</span><br><span class="line">    <span class="comment">// 创建dp向量</span></span><br><span class="line">    <span class="type">int</span>[] dp = <span class="keyword">new</span> <span class="title class_">int</span>[aim + <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; arr.length; i++) {</span><br><span class="line">        dp[<span class="number">0</span>] = <span class="number">1</span>; <span class="comment">// 凑成0元的方法必然是什么货币都不用，只有1种</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">1</span>; j &lt; dp.length; j++) {</span><br><span class="line">            <span class="keyword">if</span> (i == <span class="number">0</span>) {</span><br><span class="line">                dp[j] = j % arr[i] == <span class="number">0</span> ? <span class="number">1</span> : <span class="number">0</span>;</span><br><span class="line">            } <span class="keyword">else</span> <span class="keyword">if</span>(j &gt;= arr[i]){</span><br><span class="line">                dp[j] += dp[j - arr[i]];</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="comment">// 返回dp向量尾元素即最终结果</span></span><br><span class="line">    <span class="keyword">return</span> dp[aim];</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
 <h2 id="各种计算方法的运行速度对比"><a href="#各种计算方法的运行速度对比" class="headerlink" title="各种计算方法的运行速度对比"></a>各种计算方法的运行速度对比</h2><p>上述所有的实现代码中，都加入了记录算法开始时间和结束时间的代码，我们通过运行测试，得到下面的结果：<br><img src="https://cdn.jsdelivr.net/gh/huzhanfei/static@main/blog/images/2021/03/16138517913272.jpg"></p>
 <ul>
-<li>  可以看到，暴力搜索方法毋庸置疑是速度最慢的，因为其存在大量的重复递归过程。</li>
-<li>  记忆化搜索方法由于避免了重复递归，因此效率更高一些。</li>
-<li>  经过优化的动态规划方法可以看到在我的实测环境中，运行时间近乎为 0ms，可以说是非常快的。</li>
+<li>可以看到，暴力搜索方法毋庸置疑是速度最慢的，因为其存在大量的重复递归过程。</li>
+<li>记忆化搜索方法由于避免了重复递归，因此效率更高一些。</li>
+<li>经过优化的动态规划方法可以看到在我的实测环境中，运行时间近乎为 0ms，可以说是非常快的。</li>
 </ul>
 <h2 id="暴力递归优化成动态规划方法的大体过程"><a href="#暴力递归优化成动态规划方法的大体过程" class="headerlink" title="暴力递归优化成动态规划方法的大体过程"></a>暴力递归优化成动态规划方法的大体过程</h2><ol>
-<li> 实现暴力递归方法；</li>
-<li> 在暴力搜索方法的函数中看看哪些参数可以代表递归过程。</li>
-<li> 找到代表递归过程的参数之后，记忆化搜索方法的实现非常容易。</li>
-<li> 通过分析记忆化搜索的依赖路径，进而实现动态规划。</li>
-<li> 根据记忆化搜索方法改出动态规划方法，进而看看是否能够化简，如果能化简，还能实现时间复杂度更低的动态规划方法。</li>
+<li>实现暴力递归方法；</li>
+<li>在暴力搜索方法的函数中看看哪些参数可以代表递归过程。</li>
+<li>找到代表递归过程的参数之后，记忆化搜索方法的实现非常容易。</li>
+<li>通过分析记忆化搜索的依赖路径，进而实现动态规划。</li>
+<li>根据记忆化搜索方法改出动态规划方法，进而看看是否能够化简，如果能化简，还能实现时间复杂度更低的动态规划方法。</li>
 </ol>
 <h2 id="动态规划方法的关键点"><a href="#动态规划方法的关键点" class="headerlink" title="动态规划方法的关键点"></a>动态规划方法的关键点</h2><ol>
-<li> <strong>最优化原理</strong>：也就是<strong>最优子结构性质</strong>。指一个最优化策略具有这样的性质，不论过去状态和决策如何，对前面的决策所形成的状态而言，余下的诸决策必须构成最优策略。简单来说就是一个最优化策略的子策略总是最优的，如果一个问题满足最优化原理，就成为其具有最优子结构性质。</li>
-<li> <strong>无后效性</strong>：指某状态下决策的收益，只与状态和决策相关，与到达该状态的路径无关。</li>
-<li> <strong>子问题的重叠性</strong>：动态规划将原来具有指数级时间复杂度的暴力搜索算法改进成了具有多项式时间复杂度的算法。其中的关键在于解决冗余，这是动态规划算法的根本目的。</li>
+<li><strong>最优化原理</strong>：也就是<strong>最优子结构性质</strong>。指一个最优化策略具有这样的性质，不论过去状态和决策如何，对前面的决策所形成的状态而言，余下的诸决策必须构成最优策略。简单来说就是一个最优化策略的子策略总是最优的，如果一个问题满足最优化原理，就成为其具有最优子结构性质。</li>
+<li><strong>无后效性</strong>：指某状态下决策的收益，只与状态和决策相关，与到达该状态的路径无关。</li>
+<li><strong>子问题的重叠性</strong>：动态规划将原来具有指数级时间复杂度的暴力搜索算法改进成了具有多项式时间复杂度的算法。其中的关键在于解决冗余，这是动态规划算法的根本目的。</li>
 </ol>
 <blockquote>
 <p>本文为博主学习牛客网课程<span class="exturl" data-url="aHR0cHM6Ly93d3cubm93Y29kZXIuY29tL2NvdXJzZXMvc2VtZXN0ZXIvYWxnb3JpdGht">《直通 BAT - 面试算法精讲课》<i class="fa fa-external-link-alt"></i></span>的学习笔记 如果需要购买该课程，可以使用博主的优惠码：<strong>Adg00aI</strong>，获取 10 元优惠。</p>
@@ -455,14 +428,6 @@ window.addEventListener('load', () => {
     
     
     
-      
-  <div class="popular-posts-header">相关文章</div>
-  <ul class="popular-posts">
-    <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/articles/35577.html" rel="bookmark">Java 实现数据统计的常用算法</a></div>
-    </li>
-  </ul>
-
 
     <footer class="post-footer">
           
@@ -477,7 +442,7 @@ window.addEventListener('load', () => {
       <a href="https://www.bytelife.net/articles/32340.html" title="动态规划算法问题（经典找零案例）">https://www.bytelife.net/articles/32340.html</a>
   </li>
   <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
   </li>
 </ul>
 </div>
@@ -491,12 +456,12 @@ window.addEventListener('load', () => {
           <div class="post-nav">
             <div class="post-nav-item">
                 <a href="/articles/60306.html" rel="prev" title="浅析 ClassNotFoundException 与 NoClassDefFoundError">
-                  <i class="fa fa-chevron-left"></i> 浅析 ClassNotFoundException 与 NoClassDefFoundError
+                  <i class="fa fa-angle-left"></i> 浅析 ClassNotFoundException 与 NoClassDefFoundError
                 </a>
             </div>
             <div class="post-nav-item">
                 <a href="/articles/52761.html" rel="next" title="Hexo 一键部署到阿里云 OSS 并设置浏览器缓存">
-                  Hexo 一键部署到阿里云 OSS 并设置浏览器缓存 <i class="fa fa-chevron-right"></i>
+                  Hexo 一键部署到阿里云 OSS 并设置浏览器缓存 <i class="fa fa-angle-right"></i>
                 </a>
             </div>
           </div>
@@ -509,7 +474,7 @@ window.addEventListener('load', () => {
 
 
 
-    <div class="comments" id="waline-comments"></div><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.4.0/source/js/comments.min.js"></script>
+    <div class="comments" id="waline"></div>
 </div>
   </main>
 
@@ -517,97 +482,63 @@ window.addEventListener('load', () => {
     <div class="footer-inner">
 
   <div class="beian"><span class="exturl" data-url="aHR0cHM6Ly9iZWlhbi5taWl0Lmdvdi5jbg==">粤ICP备20059294号 </span>
-      <img src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/images/beian.png"><span class="exturl" data-url="aHR0cDovL3d3dy5iZWlhbi5nb3YuY24vcG9ydGFsL3JlZ2lzdGVyU3lzdGVtSW5mbz9yZWNvcmRjb2RlPTQ0MDMwNTAyMDA1NzM1">粤公⽹安备44030502005735号 </span>
+      <img src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/images/beian.png" alt=""><span class="exturl" data-url="aHR0cHM6Ly9iZWlhbi5tcHMuZ292LmNuLyMvcXVlcnkvd2ViU2VhcmNoP2NvZGU9NDQwMzA1MDIwMDU3MzU=">粤公⽹安备44030502005735号 </span>
   </div>
-
-<div class="copyright">
-  &copy; 2015 – 
-  <span itemprop="copyrightYear">2021</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Jeffrey</span>
-</div>
+  <div class="copyright">
+    &copy; 2015 – 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Jeffrey</span>
+  </div>
 <div class="wordcount">
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">125k</span>
+    <span title="站点总字数">78k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">10:27</span>
+    <span title="站点阅读时长">13:04</span>
   </span>
-</div>
-<div class="busuanzi-count">
-    <span class="post-meta-item" id="busuanzi_container_site_uv">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-user"></i>
-      </span>
-      <span class="site-uv" title="总访客量">
-        <span id="busuanzi_value_site_uv"></span>
-      </span>
-    </span>
-    <span class="post-meta-item" id="busuanzi_container_site_pv">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-eye"></i>
-      </span>
-      <span class="site-pv" title="总访问量">
-        <span id="busuanzi_value_site_pv"></span>
-      </span>
-    </span>
 </div>
 
     </div>
   </footer>
 
   
-  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.5.0/pjax.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.4.0/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.4.0/source/js/motion.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.4.0/source/js/next-boot.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.4.0/source/js/pjax.min.js"></script>
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
 
-  
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.4.0/source/js/third-party/search/local-search.min.js"></script>
-
-
-
-
-  <script class="next-config" data-name="mermaid" type="application/json">{&quot;enable&quot;:true,&quot;theme&quot;:&quot;forest&quot;,&quot;js&quot;:&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;mermaid@8.9.3&#x2F;dist&#x2F;mermaid.min.js&quot;}</script>
-  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.4.0/source/js/third-party/tags/mermaid.min.js"></script>
-
-  <script class="next-config" data-name="nprogress" type="application/json">{&quot;enable&quot;:true,&quot;spinner&quot;:true}</script>
-  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.4.0/source/js/third-party/nprogress.min.js"></script>
-
-  
-  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-
-
-
-  
-
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.3/dist/katex.min.css">
-
-
-  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.1.0/dist/quicklink.umd.js"></script>
-  <script class="next-config" data-name="quicklink" type="application/json">{&quot;enable&quot;:true,&quot;home&quot;:false,&quot;archive&quot;:false,&quot;delay&quot;:true,&quot;timeout&quot;:3000,&quot;priority&quot;:true,&quot;ignores&quot;:null,&quot;url&quot;:&quot;https:&#x2F;&#x2F;www.bytelife.net&#x2F;articles&#x2F;32340.html&quot;}</script>
-  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.4.0/source/js/third-party/quicklink.min.js"></script>
-<script class="next-config" data-name="waline" type="application/json">{&quot;lang&quot;:&quot;zh-cn&quot;,&quot;enable&quot;:true,&quot;serverURL&quot;:&quot;https:&#x2F;&#x2F;waline.bytelife.net&quot;,&quot;placeholder&quot;:&quot;填写昵称、邮箱即可留下你的观点与想法，邮件通知新回复。&quot;,&quot;avatar&quot;:&quot;mm&quot;,&quot;meta&quot;:[&quot;nick&quot;,&quot;mail&quot;,&quot;link&quot;],&quot;pageSize&quot;:10,&quot;visitor&quot;:false,&quot;comment_count&quot;:false,&quot;requiredFields&quot;:[&quot;nick&quot;,&quot;mail&quot;],&quot;libUrl&quot;:&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;@waline&#x2F;client&#x2F;dist&#x2F;Waline.min.js&quot;,&quot;langMode&quot;:{&quot;admin&quot;:&quot;博主&quot;,&quot;nick&quot;:&quot;昵称（必填）&quot;,&quot;mail&quot;:&quot;邮箱（必填）&quot;,&quot;link&quot;:&quot;网址（https:&#x2F;&#x2F; 选填）&quot;},&quot;el&quot;:&quot;#waline-comments&quot;,&quot;path&quot;:&quot;&#x2F;articles&#x2F;32340.html&quot;}</script>
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-CN","enable":true,"serverURL":"https://waline.bytelife.net","cssUrl":"https://unpkg.com/@waline/client@v3/dist/waline.css","commentCount":true,"pageview":false,"placeholder":"填写昵称、邮箱即可留下你的观点与想法，邮件通知新回复。","meta":["nick","mail","link"],"pageSize":10,"visitor":false,"requiredMeta":["nick","mail"],"libUrl":"https://unpkg.com/@waline/client@v3/dist/waline.js","el":"#waline","comment":true,"path":"/articles/32340.html"}</script>
+<link rel="stylesheet" href="https://unpkg.com/@waline/client@v3/dist/waline.css">
 <script>
 document.addEventListener('page:loaded', () => {
-  NexT.utils.loadComments(CONFIG.waline.el).then(() => 
+  NexT.utils.loadComments(CONFIG.waline.el).then(() =>
     NexT.utils.getScript(CONFIG.waline.libUrl, { condition: window.Waline })
-  ).then(() => {
-    new Waline(CONFIG.waline);
-  });
+  ).then(() => 
+    Waline.init(Object.assign({}, CONFIG.waline,{ el: document.querySelector(CONFIG.waline.el) }))
+  );
 });
 </script>
+
 </body>
 </html>
