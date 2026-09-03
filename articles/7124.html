@@ -6,7 +6,6 @@
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.2">
 <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/images/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/images/favicon-32x32.png">
@@ -17,15 +16,15 @@
   <meta name="yandex-verification" content="2453b777d5be12ab">
   <meta name="baidu-site-verification" content="code-3cltzkt0vc">
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/css/main.css">
+<link rel="stylesheet" href="/css/main.css">
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Righteous:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap&subset=latin,latin-ext">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.css" integrity="sha256-gkQVf8UKZgQ0HyuxL/VnacadJ+D2Kox2TCEBuNQg5+w=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/6.1.14/fancybox/fancybox.css" integrity="sha256-mdaMxrItEW6hMIVJJNPKuX0B7KCSJQVEv3mVY4N2we4=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"www.bytelife.net","root":"/","images":"https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/images","scheme":"Gemini","darkmode":true,"version":"8.26.0","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"atom-one-light","dark":"atom-one-dark"},"prism":{"light":"prism-tomorrow","dark":"prism-tomorrow"},"copy_button":{"enable":true,"style":"mac"},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/config.js" defer></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.bytelife.net","root":"/","images":"https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/images","scheme":"Gemini","darkmode":true,"version":"8.29.0","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"atom-one-light","dark":"atom-one-dark"},"prism":{"light":"prism-tomorrow","dark":"prism-tomorrow"},"copy_button":{"enable":true,"style":"mac"},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js" defer></script>
 
     <meta name="description" content="误解七：HTTPS 无法缓存许多人以为，出于安全考虑，浏览器不会在本地保存 HTTPS 缓存。实际上，只要在 HTTP 头中使用特定命令，HTTPS 是可以缓存的。 微软的 IE 项目经理 Eric Lawrence 写道：  “说来也许令人震惊，只要 HTTP 头允许这样做，所有版本的 IE 都缓存 HTTPS 内容。比如，如果头命令是 Cache-Control: max-age&#x3D;600，那么">
 <meta property="og:type" content="article">
@@ -60,12 +59,7 @@
 <script class="next-config" data-name="calendar" type="application/json">""</script>
 <title>HTTPS 的 7 个误解 | ByteLife</title>
   
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-190433082-1"></script>
-  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-190433082-1","only_pageview":false,"measure_protocol_api_secret":null}</script>
-  <script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/third-party/analytics/google-analytics.js" defer></script>
 
-  <script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/third-party/analytics/baidu-analytics.js" defer></script>
-  <script async src="https://hm.baidu.com/hm.js?ac759e323761a6cf4dc954a77df30b81"></script>
 
 
 
@@ -74,16 +68,15 @@
 
 
   
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.umd.js" integrity="sha256-a+H7FYzJv6oU2hfsfDGM2Ohw/cR9v+hPfxHCLdmCrE8=" crossorigin="anonymous" defer></script>
-<script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/utils.js" defer></script><script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/motion.js" defer></script><script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/sidebar.js" defer></script><script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/next-boot.js" defer></script><script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/pjax.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/6.1.14/fancybox/fancybox.umd.js" integrity="sha256-QnJV4HT5r8i89ovZGRD86iynZqHerEbT2xt69vDM36I=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script><script src="/js/pjax.js" defer></script>
 
   
 
 
 
-  <script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/third-party/fancybox.js" defer></script>
+  <script src="/js/third-party/fancybox.js" defer></script>
 
 
 
@@ -99,7 +92,7 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/3.0.1/quicklink.umd.js" integrity="sha256-44BednzIpUeQJcY8qtLyarFu0UCCTbgmWOvaoehiFQQ=" crossorigin="anonymous" defer></script>
   <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":false,"delay":true,"timeout":3000,"priority":true,"url":"https://www.bytelife.net/articles/7124.html"}</script>
-  <script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/third-party/quicklink.js" defer></script>
+  <script src="/js/third-party/quicklink.js" defer></script>
 
 <meta name="keywords" content="https,http,linux,java,网络协议,tcp,ssl,证书,ByteLife,Jeffrey" />
 
@@ -111,41 +104,8 @@ window.addEventListener('load', () => {
 });
 </script>
 
-<script data-pjax>
-(function() {
-    var el = document.createElement("script");
-    el.src = "https://sf1-scmcdn-tos.pstatp.com/goofy/ttzz/push.js?f1c5d0c67c12eed77cb802aa02726851ef3ebdf3a7db6b0aa0bd5f927d3018d4059266b591bbec46857a16352461582a5eef3f18a6919b415e533ce545a239922b8d7c8c6655c9b00211740aa8a98e2e";
-    el.id = "ttzz";
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(el, s);
-})(window)
-</script>
-
-<script data-pjax>
-(function() {
-    var bp = document.createElement('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-    } else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-    }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
-</script>
-
-<script data-pjax>
-(function(){
-    var el = document.createElement("script");
-    el.src = "https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/360-push.min.js?d182b3f28525f2db83acfaaf6e696dba";
-    el.id = "sozz";
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(el, s);
-})();
-</script>
   <noscript>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/css/noscript.css">
+    <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
 <link rel="alternate" href="/atom.xml" title="ByteLife" type="application/atom+xml">
 </head>
@@ -291,7 +251,7 @@ window.addEventListener('load', () => {
       <a class="popular-posts-link" href="/articles/47472.html" rel="bookmark">
         <time class="popular-posts-time">2021-03-24</time>
         <br>
-      Hexo 静态网站托管到腾讯云 COS + CDN 加速以及缓存自动刷新完美方案
+      Hexo 静态网站托管到腾讯云 COS+CDN 加速以及缓存自动刷新完美方案
       </a>
     </li>
   </ul>
@@ -388,7 +348,7 @@ window.addEventListener('load', () => {
 
 <p>Firefox 默认只在内存中缓存 HTTPS。但是，只要头命令中有 Cache-Control: Public，缓存就会被写到硬盘上。下面的图片显示，Firefox 的硬盘缓存中有 HTTPS 内容，头命令正是 Cache-Control:Public。<br><img src="https://cdn.jsdelivr.net/gh/huzhanfei/static@main/blog/images/2021/03/16139210436054.png"></p>
 <h3 id="误解六：SSL证书很贵"><a href="#误解六：SSL证书很贵" class="headerlink" title="误解六：SSL证书很贵"></a><strong>误解六：SSL 证书很贵</strong></h3><p>如果你在网上搜一下，就会发现很多便宜的 SSL 证书，大概 10 美元一年，这和一个.com 域名的年费差不多。而且事实上，还能找到免费的 SSL 证书。 在效力上，便宜的证书当然会比大机构颁发的证书差一点，但是几乎所有的主流浏览器都接受这些证书。 &nbsp;</p>
-<h3 id="误解五：HTTPS站点必须有独享的IP地址"><a href="#误解五：HTTPS站点必须有独享的IP地址" class="headerlink" title="误解五：HTTPS站点必须有独享的IP地址"></a><strong>误解五：HTTPS 站点必须有独享的 IP 地址</strong></h3><p>由于 IPv4 将要分配完毕，所以很多人关心这个问题。每个 IP 地址只能安装一张 SSL 证书，这是毫无疑问的。但是，如果你使用子域名通配符 SSL 证书（wildcard SSL certificate，价格大约是每年 125 美元），就能在一个 IP 地址上部署多个 HTTPS 子域名。比如，<span class="exturl" data-url="aHR0cHM6Ly93d3cuaHR0cHdhdGNoLmNvbeWSjGh0dHBzLy9zdG9yZS5odHRwd2F0Y2guY29tJUVGJUJDJThDJUU1JUIwJUIxJUU1JTg1JUIxJUU0JUJBJUFCJUU1JTkwJThDJUU0JUI4JTgwJUU0JUI4JUFBSVAlRTUlOUMlQjAlRTUlOUQlODAlRTMlODAlODI=">https://www.httpwatch.com 和 https://store.httpwatch.com，就共享同一个 IP 地址。<i class="fa fa-external-link-alt"></i></span><br><img src="https://cdn.jsdelivr.net/gh/huzhanfei/static@main/blog/images/2021/03/16139210533569.png"><br> 另外，UCC（统一通信证书，Unified Communications Certificate）支持一张证书同时匹配多个站点，可以是完全不同的域名。SNI（服务器名称指示，Server Name Indication）允许一个 IP 地址上多个域名安装多张证书。服务器端，Apache 和 Nginx 支持该技术，IIS 不支持；客户端，IE 7+、Firefox 2.0+、Chrome 6+、Safari 2.1 + 和 Opera 8.0 + 支持。 &nbsp;</p>
+<h3 id="误解五：HTTPS站点必须有独享的IP地址"><a href="#误解五：HTTPS站点必须有独享的IP地址" class="headerlink" title="误解五：HTTPS站点必须有独享的IP地址"></a><strong>误解五：HTTPS 站点必须有独享的 IP 地址</strong></h3><p>由于 IPv4 将要分配完毕，所以很多人关心这个问题。每个 IP 地址只能安装一张 SSL 证书，这是毫无疑问的。但是，如果你使用子域名通配符 SSL 证书（wildcard SSL certificate，价格大约是每年 125 美元），就能在一个 IP 地址上部署多个 HTTPS 子域名。比如，<span class="exturl" data-url="aHR0cHM6Ly93d3cuaHR0cHdhdGNoLmNvbeWSjGh0dHBzLy9zdG9yZS5odHRwd2F0Y2guY29tJUVGJUJDJThDJUU1JUIwJUIxJUU1JTg1JUIxJUU0JUJBJUFCJUU1JTkwJThDJUU0JUI4JTgwJUU0JUI4JUFBSVAlRTUlOUMlQjAlRTUlOUQlODAlRTMlODAlODI=">https://www.httpwatch.com 和 https://store.httpwatch.com，就共享同一个 IP 地址。<i class="fa fa-external-link-alt"></i></span><br><img src="https://cdn.jsdelivr.net/gh/huzhanfei/static@main/blog/images/2021/03/16139210533569.png"><br> 另外，UCC（统一通信证书，Unified Communications Certificate）支持一张证书同时匹配多个站点，可以是完全不同的域名。SNI（服务器名称指示，Server Name Indication）允许一个 IP 地址上多个域名安装多张证书。服务器端，Apache 和 Nginx 支持该技术，IIS 不支持；客户端，IE 7+、Firefox 2.0+、Chrome 6+、Safari 2.1+ 和 Opera 8.0+ 支持。 &nbsp;</p>
 <h3 id="误解四：转移服务器时要购买新证书"><a href="#误解四：转移服务器时要购买新证书" class="headerlink" title="误解四：转移服务器时要购买新证书"></a><strong>误解四：转移服务器时要购买新证书</strong></h3><p>部署 SSL 证书，需要这样几步：</p>
 <blockquote>
 <ol>
@@ -408,7 +368,7 @@ window.addEventListener('load', () => {
 </blockquote>
 <p>以 Twitter 为例，它的登录页使用了 HTTPS，但是登录以后，其他页面就变成了 HTTP。这时，它的 cookie 里的 session 值就暴露了。<br><img src="https://cdn.jsdelivr.net/gh/huzhanfei/static@main/blog/images/2021/03/16139211218521.png"><br><img src="https://cdn.javacodes.cn/files/2016/07/2016-07-04_15-58-23.png"> 也就是说，这些 cookie 是在 HTTPS 环境下建立的，但是却在 HTTP 环境下传输。如果有人劫持到这些 cookie，那他就能以你的身份在 Twitter 上发言了。 （完） &nbsp;</p>
 <blockquote>
-<p><strong>来自：阮一峰的网络日志</strong><br><strong>译者：<strong>阮一峰</strong></strong><br><strong>链接：<span class="exturl" data-url="aHR0cDovL3d3dy5ydWFueWlmZW5nLmNvbS9ibG9nLzIwMTEvMDIvc2V2ZW4vX215dGhzL19hYm91dF9odHRwcy5odG1s">http://www.ruanyifeng.com/blog/2011/02/seven\_myths\_about_https.html<i class="fa fa-external-link-alt"></i></span></strong><br><strong>原文：<span class="exturl" data-url="aHR0cDovL2Jsb2cuaHR0cHdhdGNoLmNvbS8yMDExLzAxLzI4L3RvcC03LW15dGhzLWFib3V0LWh0dHBzLw==">http://blog.httpwatch.com/2011/01/28/top-7-myths-about-https/<i class="fa fa-external-link-alt"></i></span></strong></p>
+<p><strong>来自：阮一峰的网络日志</strong><br><strong>译者：<strong>阮一峰</strong></strong><br><strong>链接：<span class="exturl" data-url="aHR0cDovL3d3dy5ydWFueWlmZW5nLmNvbS9ibG9nLzIwMTEvMDIvc2V2ZW4vX215dGhzL19hYm91dF9odHRwcy5odG1s">http://www.ruanyifeng.com/blog/2011/02/seven\_myths\_about_https.html<i class="fa fa-external-link-alt"></i></span></strong><br><strong> 原文：<span class="exturl" data-url="aHR0cDovL2Jsb2cuaHR0cHdhdGNoLmNvbS8yMDExLzAxLzI4L3RvcC03LW15dGhzLWFib3V0LWh0dHBzLw==">http://blog.httpwatch.com/2011/01/28/top-7-myths-about-https/<i class="fa fa-external-link-alt"></i></span></strong></p>
 </blockquote>
 
     </div>

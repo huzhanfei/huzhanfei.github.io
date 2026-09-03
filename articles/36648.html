@@ -6,7 +6,6 @@
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.2">
 <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/images/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/images/favicon-32x32.png">
@@ -17,15 +16,15 @@
   <meta name="yandex-verification" content="2453b777d5be12ab">
   <meta name="baidu-site-verification" content="code-3cltzkt0vc">
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/css/main.css">
+<link rel="stylesheet" href="/css/main.css">
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Righteous:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap&subset=latin,latin-ext">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.css" integrity="sha256-gkQVf8UKZgQ0HyuxL/VnacadJ+D2Kox2TCEBuNQg5+w=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/6.1.14/fancybox/fancybox.css" integrity="sha256-mdaMxrItEW6hMIVJJNPKuX0B7KCSJQVEv3mVY4N2we4=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"www.bytelife.net","root":"/","images":"https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/images","scheme":"Gemini","darkmode":true,"version":"8.26.0","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"atom-one-light","dark":"atom-one-dark"},"prism":{"light":"prism-tomorrow","dark":"prism-tomorrow"},"copy_button":{"enable":true,"style":"mac"},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/config.js" defer></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.bytelife.net","root":"/","images":"https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/images","scheme":"Gemini","darkmode":true,"version":"8.29.0","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"atom-one-light","dark":"atom-one-dark"},"prism":{"light":"prism-tomorrow","dark":"prism-tomorrow"},"copy_button":{"enable":true,"style":"mac"},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js" defer></script>
 
     <meta name="description" content="术语定义术语: 哈希算法英文: hash algorithm解释: 是一种将任意内容的输入转换成相同长度输出的加密方式，其输出被称为哈希值。&nbsp;">
 <meta property="og:type" content="article">
@@ -53,12 +52,7 @@
 <script class="next-config" data-name="calendar" type="application/json">""</script>
 <title>深入剖析 ConcurrentHashMap | ByteLife</title>
   
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-190433082-1"></script>
-  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-190433082-1","only_pageview":false,"measure_protocol_api_secret":null}</script>
-  <script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/third-party/analytics/google-analytics.js" defer></script>
 
-  <script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/third-party/analytics/baidu-analytics.js" defer></script>
-  <script async src="https://hm.baidu.com/hm.js?ac759e323761a6cf4dc954a77df30b81"></script>
 
 
 
@@ -67,16 +61,15 @@
 
 
   
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.umd.js" integrity="sha256-a+H7FYzJv6oU2hfsfDGM2Ohw/cR9v+hPfxHCLdmCrE8=" crossorigin="anonymous" defer></script>
-<script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/utils.js" defer></script><script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/motion.js" defer></script><script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/sidebar.js" defer></script><script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/next-boot.js" defer></script><script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/pjax.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/6.1.14/fancybox/fancybox.umd.js" integrity="sha256-QnJV4HT5r8i89ovZGRD86iynZqHerEbT2xt69vDM36I=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script><script src="/js/pjax.js" defer></script>
 
   
 
 
 
-  <script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/third-party/fancybox.js" defer></script>
+  <script src="/js/third-party/fancybox.js" defer></script>
 
 
 
@@ -92,7 +85,7 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/3.0.1/quicklink.umd.js" integrity="sha256-44BednzIpUeQJcY8qtLyarFu0UCCTbgmWOvaoehiFQQ=" crossorigin="anonymous" defer></script>
   <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":false,"delay":true,"timeout":3000,"priority":true,"url":"https://www.bytelife.net/articles/36648.html"}</script>
-  <script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/third-party/quicklink.js" defer></script>
+  <script src="/js/third-party/quicklink.js" defer></script>
 
 <meta name="keywords" content="java,多线程,并发,concurrent,concurrenthashmap,线程安全,hashmap,分段锁,锁分段,锁,ByteLife,Jeffrey" />
 
@@ -104,41 +97,8 @@ window.addEventListener('load', () => {
 });
 </script>
 
-<script data-pjax>
-(function() {
-    var el = document.createElement("script");
-    el.src = "https://sf1-scmcdn-tos.pstatp.com/goofy/ttzz/push.js?f1c5d0c67c12eed77cb802aa02726851ef3ebdf3a7db6b0aa0bd5f927d3018d4059266b591bbec46857a16352461582a5eef3f18a6919b415e533ce545a239922b8d7c8c6655c9b00211740aa8a98e2e";
-    el.id = "ttzz";
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(el, s);
-})(window)
-</script>
-
-<script data-pjax>
-(function() {
-    var bp = document.createElement('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-    } else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-    }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
-</script>
-
-<script data-pjax>
-(function(){
-    var el = document.createElement("script");
-    el.src = "https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/360-push.min.js?d182b3f28525f2db83acfaaf6e696dba";
-    el.id = "sozz";
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(el, s);
-})();
-</script>
   <noscript>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/css/noscript.css">
+    <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
 <link rel="alternate" href="/atom.xml" title="ByteLife" type="application/atom+xml">
 </head>
@@ -391,8 +351,8 @@ window.addEventListener('load', () => {
 <p>由上面的代码可知 segments 数组的长度 ssize 通过 concurrencyLevel 计算得出。为了能通过按位与的哈希算法来定位 segments 数组的索引，必须保证 segments 数组的长度是 2 的 N 次方（power-of-two size），所以必须计算出一个是大于或等于 concurrencyLevel 的最小的 2 的 N 次方值来作为 segments 数组的长度。假如 concurrencyLevel 等于 14，15 或 16，ssize 都会等于 16，即容器里锁的个数也是 16。注意 concurrencyLevel 的最大大小是 65535，意味着 segments 数组的长度最大为 65536，对应的二进制是 16 位。 初始化 segmentShift 和 segmentMask。这两个全局变量在定位 segment 时的哈希算法里需要使用，sshift 等于 ssize 从 1 向左移位的次数，在默认情况下 concurrencyLevel 等于 16，1 需要向左移位移动 4 次，所以 sshift 等于 4。segmentShift 用于定位参与 hash 运算的位数，segmentShift 等于 32 减 sshift，所以等于 28，这里之所以用 32 是因为 ConcurrentHashMap 里的 hash () 方法输出的最大数是 32 位的，后面的测试中我们可以看到这点。segmentMask 是哈希运算的掩码，等于 ssize 减 1，即 15，掩码的二进制各个位的值都是 1。因为 ssize 的最大长度是 65536，所以 segmentShift 最大值是 16，segmentMask 最大值是 65535，对应的二进制是 16 位，每个位都是 1。 初始化每个 Segment。输入参数 initialCapacity 是 ConcurrentHashMap 的初始化容量，loadfactor 是每个 segment 的负载因子，在构造方法里需要通过这两个参数来初始化数组中的每个 segment。</p>
 <figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (initialCapacity &gt; MAXIMUM_CAPACITY)</span><br><span class="line">    initialCapacity = MAXIMUM_CAPACITY;</span><br><span class="line"><span class="type">int</span> <span class="variable">c</span> <span class="operator">=</span> initialCapacity / ssize;</span><br><span class="line"><span class="keyword">if</span> (c * ssize &lt; initialCapacity)</span><br><span class="line">    ++c;</span><br><span class="line"><span class="type">int</span> <span class="variable">cap</span> <span class="operator">=</span> <span class="number">1</span>;</span><br><span class="line"><span class="keyword">while</span> (cap &lt; c)</span><br><span class="line">    cap &lt;&lt;= <span class="number">1</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; <span class="built_in">this</span>.segments.length; ++i)</span><br><span class="line">    <span class="built_in">this</span>.segments[i] = <span class="keyword">new</span> <span class="title class_">Segment</span>&lt;K,V&gt;(cap, loadFactor);</span><br></pre></td></tr></tbody></table></figure>
 
-<p>上面代码中的变量 cap 就是 segment 里 HashEntry 数组的长度，它等于 initialCapacity 除以 ssize 的倍数 c，如果 c 大于 1，就会取大于等于 c 的 2 的 N 次方值，所以 cap 不是 1，就是 2 的 N 次方。segment 的容量 threshold＝(int) cap * loadFactor，默认情况下 initialCapacity 等于 16，loadfactor 等于 0.75，通过运算 cap 等于 1，threshold 等于零。</p>
-<h3 id="定位Segment"><a href="#定位Segment" class="headerlink" title="定位Segment"></a>定位 Segment</h3><p>既然 ConcurrentHashMap 使用分段锁 Segment 来保护不同段的数据，那么在插入和获取元素的时候，必须先通过哈希算法定位到 Segment。可以看到 ConcurrentHashMap 会首先使用 Wang / Jenkins hash 的变种算法对元素的 hashCode 进行一次再哈希。</p>
+<p>上面代码中的变量 cap 就是 segment 里 HashEntry 数组的长度，它等于 initialCapacity 除以 ssize 的倍数 c，如果 c 大于 1，就会取大于等于 c 的 2 的 N 次方值，所以 cap 不是 1，就是 2 的 N 次方。segment 的容量 threshold＝(int) cap*loadFactor，默认情况下 initialCapacity 等于 16，loadfactor 等于 0.75，通过运算 cap 等于 1，threshold 等于零。</p>
+<h3 id="定位Segment"><a href="#定位Segment" class="headerlink" title="定位Segment"></a>定位 Segment</h3><p>既然 ConcurrentHashMap 使用分段锁 Segment 来保护不同段的数据，那么在插入和获取元素的时候，必须先通过哈希算法定位到 Segment。可以看到 ConcurrentHashMap 会首先使用 Wang/Jenkins hash 的变种算法对元素的 hashCode 进行一次再哈希。</p>
 <figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">hash</span><span class="params">(<span class="type">int</span> h)</span> {</span><br><span class="line">        h += (h &lt;&lt; <span class="number">15</span>) ^ <span class="number">0xffffcd7d</span>;</span><br><span class="line">        h ^= (h &gt;&gt;&gt; <span class="number">10</span>);</span><br><span class="line">        h += (h &lt;&lt; <span class="number">3</span>);</span><br><span class="line">        h ^= (h &gt;&gt;&gt; <span class="number">6</span>);</span><br><span class="line">        h += (h &lt;&lt; <span class="number">2</span>) + (h &lt;&lt; <span class="number">14</span>);</span><br><span class="line">        <span class="keyword">return</span> h ^ (h &gt;&gt;&gt; <span class="number">16</span>);</span><br><span class="line">    }</span><br></pre></td></tr></tbody></table></figure>
 
 <p>之所以进行再哈希，其目的是为了减少哈希冲突，使元素能够均匀的分布在不同的 Segment 上，从而提高容器的存取效率。假如哈希的质量差到极点，那么所有的元素都在一个 Segment 中，不仅存取元素缓慢，分段锁也会失去意义。我做了一个测试，不通过再哈希而直接执行哈希计算。</p>

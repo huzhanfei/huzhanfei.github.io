@@ -6,7 +6,6 @@
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.2">
 <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/images/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/images/favicon-32x32.png">
@@ -17,15 +16,15 @@
   <meta name="yandex-verification" content="2453b777d5be12ab">
   <meta name="baidu-site-verification" content="code-3cltzkt0vc">
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/css/main.css">
+<link rel="stylesheet" href="/css/main.css">
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Righteous:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap&subset=latin,latin-ext">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.css" integrity="sha256-gkQVf8UKZgQ0HyuxL/VnacadJ+D2Kox2TCEBuNQg5+w=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/6.1.14/fancybox/fancybox.css" integrity="sha256-mdaMxrItEW6hMIVJJNPKuX0B7KCSJQVEv3mVY4N2we4=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"www.bytelife.net","root":"/","images":"https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/images","scheme":"Gemini","darkmode":true,"version":"8.26.0","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"atom-one-light","dark":"atom-one-dark"},"prism":{"light":"prism-tomorrow","dark":"prism-tomorrow"},"copy_button":{"enable":true,"style":"mac"},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/config.js" defer></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.bytelife.net","root":"/","images":"https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/images","scheme":"Gemini","darkmode":true,"version":"8.29.0","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"atom-one-light","dark":"atom-one-dark"},"prism":{"light":"prism-tomorrow","dark":"prism-tomorrow"},"copy_button":{"enable":true,"style":"mac"},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js" defer></script>
 
     <meta name="description" content="原文链接：蔓草札记 » WordPress 博客同步到 CSDN 插件  在没用 WordPress 博客前就在 CSDN 写了一些日志，后来自己搭建博客后，就希望能够将博客同步到 CSDN 中，无奈 CSDN 在 2011 年 7 月宣布暂不支持 Windows&nbsp;Live&nbsp;Writer 发布博文，直到在 2014 年 5 月 29 日才宣布重新让插件同步成为可能，不过目前网">
 <meta property="og:type" content="article">
@@ -52,12 +51,7 @@
 <script class="next-config" data-name="calendar" type="application/json">""</script>
 <title>WordPress 博客同步到 CSDN 插件 | ByteLife</title>
   
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-190433082-1"></script>
-  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-190433082-1","only_pageview":false,"measure_protocol_api_secret":null}</script>
-  <script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/third-party/analytics/google-analytics.js" defer></script>
 
-  <script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/third-party/analytics/baidu-analytics.js" defer></script>
-  <script async src="https://hm.baidu.com/hm.js?ac759e323761a6cf4dc954a77df30b81"></script>
 
 
 
@@ -66,16 +60,15 @@
 
 
   
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.umd.js" integrity="sha256-a+H7FYzJv6oU2hfsfDGM2Ohw/cR9v+hPfxHCLdmCrE8=" crossorigin="anonymous" defer></script>
-<script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/utils.js" defer></script><script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/motion.js" defer></script><script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/sidebar.js" defer></script><script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/next-boot.js" defer></script><script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/pjax.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/6.1.14/fancybox/fancybox.umd.js" integrity="sha256-QnJV4HT5r8i89ovZGRD86iynZqHerEbT2xt69vDM36I=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script><script src="/js/pjax.js" defer></script>
 
   
 
 
 
-  <script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/third-party/fancybox.js" defer></script>
+  <script src="/js/third-party/fancybox.js" defer></script>
 
 
 
@@ -91,7 +84,7 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/3.0.1/quicklink.umd.js" integrity="sha256-44BednzIpUeQJcY8qtLyarFu0UCCTbgmWOvaoehiFQQ=" crossorigin="anonymous" defer></script>
   <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":false,"delay":true,"timeout":3000,"priority":true,"url":"https://www.bytelife.net/articles/49539.html"}</script>
-  <script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/third-party/quicklink.js" defer></script>
+  <script src="/js/third-party/quicklink.js" defer></script>
 
 <meta name="keywords" content="WordPress,CSDN,同步,插件,博客,网站,文章,ByteLife,Jeffrey" />
 
@@ -103,41 +96,8 @@ window.addEventListener('load', () => {
 });
 </script>
 
-<script data-pjax>
-(function() {
-    var el = document.createElement("script");
-    el.src = "https://sf1-scmcdn-tos.pstatp.com/goofy/ttzz/push.js?f1c5d0c67c12eed77cb802aa02726851ef3ebdf3a7db6b0aa0bd5f927d3018d4059266b591bbec46857a16352461582a5eef3f18a6919b415e533ce545a239922b8d7c8c6655c9b00211740aa8a98e2e";
-    el.id = "ttzz";
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(el, s);
-})(window)
-</script>
-
-<script data-pjax>
-(function() {
-    var bp = document.createElement('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-    } else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-    }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
-</script>
-
-<script data-pjax>
-(function(){
-    var el = document.createElement("script");
-    el.src = "https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/360-push.min.js?d182b3f28525f2db83acfaaf6e696dba";
-    el.id = "sozz";
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(el, s);
-})();
-</script>
   <noscript>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/css/noscript.css">
+    <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
 <link rel="alternate" href="/atom.xml" title="ByteLife" type="application/atom+xml">
 </head>
@@ -268,7 +228,7 @@ window.addEventListener('load', () => {
       <a class="popular-posts-link" href="/articles/47472.html" rel="bookmark">
         <time class="popular-posts-time">2021-03-24</time>
         <br>
-      Hexo 静态网站托管到腾讯云 COS + CDN 加速以及缓存自动刷新完美方案
+      Hexo 静态网站托管到腾讯云 COS+CDN 加速以及缓存自动刷新完美方案
       </a>
     </li>
     <li class="popular-posts-item">
@@ -420,7 +380,7 @@ window.addEventListener('load', () => {
 <p><strong>百度云下载：</strong><br><span class="exturl" data-url="aHR0cDovL3Bhbi5iYWlkdS5jb20vcy8xYzBkSHFUeQ==">http://pan.baidu.com/s/1c0dHqTy<i class="fa fa-external-link-alt"></i></span>（V1.1 版本） </p>
 <p>建议通过代码地址下载，百度云下载后续不一定更新。 WP2CSDNBlog 插件，开始同步吧 :） </p>
 <p><strong>2015.05.12 更新：</strong><br>插件已上传 WordPress plugins，可以在 WordPress 后台安装插件页面直接搜索 “wp2csdnblog” 安装。 WordPress plugins 地址：<span class="exturl" data-url="aHR0cHM6Ly93b3JkcHJlc3Mub3JnL3BsdWdpbnMvd3AyY3NkbmJsb2cv">https://wordpress.org/plugins/wp2csdnblog/<i class="fa fa-external-link-alt"></i></span> </p>
-<p><strong>2015.06.14 更新：</strong><br>更新插件到 V1.2 版本，支持同时同步 WordPress 博客内容到新浪博客和网易博客。 新浪博客设置的用户名是博客的登录名，如果登录名是邮箱，不要忘了邮箱后缀。 网易博客设置的用户名根据邮箱区分。例如：您的邮箱帐号是 163 的：<span class="exturl" data-url="bWFpbHRvOiYjOTg7JiN4NmM7JiN4NmY7JiN4Njc7JiN4NWY7JiM5NzsmI3g2NDsmIzEwOTsmI3g2OTsmI3g2ZTsmI3g0MDsmIzQ5OyYjeDM2OyYjNTE7JiM0NjsmIzk5OyYjeDZmOyYjeDZkOw==">blog_admin@163.com<i class="fa fa-external-link-alt"></i></span>，则用户名是 blog_admin，如果你的邮箱账号是 126 的：<span class="exturl" data-url="bWFpbHRvOiYjeDYyOyYjeDZjOyYjeDZmOyYjeDY3OyYjOTU7JiM5NzsmIzEwMDsmIzEwOTsmIzEwNTsmIzExMDsmI3g0MDsmIzQ5OyYjNTA7JiM1NDsmIzQ2OyYjOTk7JiN4NmY7JiN4NmQ7">blog_admin@126.com<i class="fa fa-external-link-alt"></i></span>，则用户名是 blog_admin@126，其余 yeah.net、188 等非 163 邮箱用户，请参考 126 邮箱的格式。 </p>
+<p><strong>2015.06.14 更新：</strong><br>更新插件到 V1.2 版本，支持同时同步 WordPress 博客内容到新浪博客和网易博客。 新浪博客设置的用户名是博客的登录名，如果登录名是邮箱，不要忘了邮箱后缀。 网易博客设置的用户名根据邮箱区分。例如：您的邮箱帐号是 163 的：<span class="exturl" data-url="bWFpbHRvOmJsb2dfYWRtaW5AMTYzLmNvbQ==">blog_admin@163.com<i class="fa fa-external-link-alt"></i></span>，则用户名是 blog_admin，如果你的邮箱账号是 126 的：<span class="exturl" data-url="bWFpbHRvOmJsb2dfYWRtaW5AMTI2LmNvbQ==">blog_admin@126.com<i class="fa fa-external-link-alt"></i></span>，则用户名是 blog_admin@126，其余 yeah.net、188 等非 163 邮箱用户，请参考 126 邮箱的格式。 </p>
 <p><strong>2015.06.22 更新：</strong><br>更新插件到 V1.3 版本，支持将 wordpress 的定时发布文章发布到设置的博客。 </p>
 <p><strong>2015.07.05 更新：</strong><br>更新插件到 V1.4 版本，完善对定时发布文章功能的支持，改善同步文章的排版格式。 </p>
 <p><strong>2016.05.04 更新：</strong><br>更新插件到 V1.5 版本，修改 CSDN 博客同步文章排版格式。 最近一段时间同步 CSDN 和网易博客的文章都没有成功，是 CSDN 和网易服务器返回错误导致的。大家可以用 Windows Live Writer 或者 Word 来发文章测试，如果能发布成功，则说明是插件的问题，反之很可能是服务器的问题，然后建议将服务器返回的错误在下面对应文章下留言。</p>
