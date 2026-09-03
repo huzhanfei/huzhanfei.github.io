@@ -11,7 +11,7 @@
   <rights>All rights reserved 2026, Jeffrey</rights>
   <subtitle>技术交流与学习自留地</subtitle>
   <title>ByteLife</title>
-  <updated>2026-09-03T16:46:30.105Z</updated>
+  <updated>2026-09-03T17:11:19.415Z</updated>
   <entry>
     <author>
       <name>Jeffrey</name>
@@ -32,7 +32,7 @@
       <![CDATA[<p>Kafka 作为大数据领域常用的消息中间件，其核心原理相对于其它消息中间件而言更为复杂，本文主要介绍 Kafka 消费者的 rebalance 机制以及 controller broker 选举机制、副本选举机制等实现原理。</p>]]>
     </summary>
     <title>Kafka Rebalance 机制和选举策略总结</title>
-    <updated>2026-09-03T16:46:30.105Z</updated>
+    <updated>2026-09-03T17:11:19.415Z</updated>
   </entry>
   <entry>
     <author>
@@ -51,7 +51,7 @@
       <![CDATA[<p>近期把博客折腾到腾讯云了，对比了腾讯云和阿里云后，发现腾讯云近期 CDN 做了很多升级，对于 CDN 缓存节点的配置更加细致，另外毕竟腾讯云价格更低嘛，对个人站长更友好一些。这篇文章主要讲讲如何使用腾讯云的 COS+CDN 部署静态网站，以及使用腾讯云函数服务完美解决（对官方提供的刷新函数做了些优化）CDN 节点的缓存自动刷新问题。</p>]]>
     </summary>
     <title>Hexo 静态网站托管到腾讯云 COS+CDN 加速以及缓存自动刷新完美方案</title>
-    <updated>2026-09-03T16:46:30.104Z</updated>
+    <updated>2026-09-03T17:11:19.415Z</updated>
   </entry>
   <entry>
     <author>
