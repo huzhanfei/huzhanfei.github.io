@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.1">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.2">
 <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
@@ -23,9 +23,9 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.css" integrity="sha256-gkQVf8UKZgQ0HyuxL/VnacadJ+D2Kox2TCEBuNQg5+w=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/6.1.14/fancybox/fancybox.css" integrity="sha256-mdaMxrItEW6hMIVJJNPKuX0B7KCSJQVEv3mVY4N2we4=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"www.bytelife.net","root":"/","images":"https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/images","scheme":"Gemini","darkmode":true,"version":"8.26.0","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"atom-one-light","dark":"atom-one-dark"},"prism":{"light":"prism-tomorrow","dark":"prism-tomorrow"},"copy_button":{"enable":true,"style":"mac"},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/config.js" defer></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.bytelife.net","root":"/","images":"https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/images","scheme":"Gemini","darkmode":true,"version":"8.29.0","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"atom-one-light","dark":"atom-one-dark"},"prism":{"light":"prism-tomorrow","dark":"prism-tomorrow"},"copy_button":{"enable":true,"style":"mac"},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/config.js" defer></script>
 
     <meta name="description" content="一、在 Spring 的 IOC 容器中配置 Bean可以通过 Spring 的 XML 配置文件来配置 Bean，例如： 12&lt;!-- 配置Bean --&gt;&lt;bean id&#x3D;&quot;helloWorld&quot; class&#x3D;&quot;cn.javacodes.spring.beans.HelloWorld&quot;&gt;&lt;&#x2F;bean&gt;">
 <meta property="og:type" content="article">
@@ -66,9 +66,8 @@
 
 
   
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.umd.js" integrity="sha256-a+H7FYzJv6oU2hfsfDGM2Ohw/cR9v+hPfxHCLdmCrE8=" crossorigin="anonymous" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/6.1.14/fancybox/fancybox.umd.js" integrity="sha256-QnJV4HT5r8i89ovZGRD86iynZqHerEbT2xt69vDM36I=" crossorigin="anonymous" defer></script>
 <script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/utils.js" defer></script><script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/motion.js" defer></script><script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/sidebar.js" defer></script><script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/next-boot.js" defer></script><script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/pjax.js" defer></script>
 
   
@@ -92,7 +91,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/3.0.1/quicklink.umd.js" integrity="sha256-44BednzIpUeQJcY8qtLyarFu0UCCTbgmWOvaoehiFQQ=" crossorigin="anonymous" defer></script>
   <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":false,"delay":true,"timeout":3000,"priority":true,"url":"https://www.bytelife.net/articles/27638.html"}</script>
   <script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/third-party/quicklink.js" defer></script>
-<link rel="dns-prefetch" href="https://waline.bytelife.net">
+
 <meta name="keywords" content="java,spring,springboot,bean,框架,ioc,di,xml,注入,装配,ByteLife,Jeffrey" />
 
 
@@ -351,20 +350,6 @@ window.addEventListener('load', () => {
     </span>
 
   
-  
-  <span class="post-meta-item">
-    
-    <span class="post-meta-item-icon">
-      <i class="far fa-comment"></i>
-    </span>
-    <span class="post-meta-item-text">评论：</span>
-  
-    <a title="waline" href="/articles/27638.html#waline" itemprop="discussionUrl">
-      <span class="post-comments-count waline-comment-count" data-path="/articles/27638.html" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
     <span class="post-meta-break"></span>
     <span class="post-meta-item" title="本文字数">
       <span class="post-meta-item-icon">
@@ -438,7 +423,7 @@ window.addEventListener('load', () => {
 <p>（2）按类型匹配入参</p>
 <figure class="highlight xml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 构造器注入-通过类型 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"car1"</span> <span class="attr">class</span>=<span class="string">"cn.javacodes.spring.beans.Car"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">constructor-arg</span> <span class="attr">value</span>=<span class="string">"卡宴"</span> <span class="attr">type</span>=<span class="string">"java.lang.String"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">constructor-arg</span> <span class="attr">value</span>=<span class="string">"保时捷"</span> <span class="attr">type</span>=<span class="string">"java.lang.String"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">constructor-arg</span> <span class="attr">value</span>=<span class="string">"260"</span> <span class="attr">type</span>=<span class="string">"double"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
 <h4 id="3、工厂方法注入"><a href="#3、工厂方法注入" class="headerlink" title="3、工厂方法注入"></a>3、工厂方法注入</h4><p>有时候静态工厂方法是实例化对象的唯一方法。Spring 支持通过<bean>元素的 factory-method 属性类装配工厂创建的 bean。 例如如下是一个 Stage 单例类：</bean></p>
-<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> cn.javacodes.spring.beans;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Created by eric on 16-8-31.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Stage</span> {</span><br><span class="line">    <span class="keyword">private</span> <span class="title function_">Stage</span><span class="params">()</span> {</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">class</span> <span class="title class_">StageSingletonHolder</span> {</span><br><span class="line">        <span class="keyword">static</span> <span class="type">Stage</span> <span class="variable">instance</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Stage</span>();</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> Stage <span class="title function_">getInstance</span><span class="params">()</span> {</span><br><span class="line">        <span class="keyword">return</span> StageSingletonHolder.instance;</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> cn.javacodes.spring.beans;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Created by eric on 16-8-31.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Stage</span> {</span><br><span class="line">    <span class="type">private</span> <span class="title function_">Stage</span><span class="params">()</span> {</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">class</span> <span class="title class_">StageSingletonHolder</span> {</span><br><span class="line">        <span class="keyword">static</span> <span class="type">Stage</span> <span class="variable">instance</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Stage</span>();</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">Stage</span> <span class="title function_">getInstance</span><span class="params">()</span> {</span><br><span class="line">        <span class="keyword">return</span> StageSingletonHolder.instance;</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 <p>我们注意到该类只有一个 private 的构造方法，而并未提供公开的构造方法，因此在 Spring 中不能直接通过之前所述的方式来获得该类的 bean 对象。为了解决这个问题，Spirng 的<bean>标签提供了一个 factory-method 属性，配置如下所示：</bean></p>
 <figure class="highlight xml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 静态工厂方法注入--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"theStage"</span> <span class="attr">class</span>=<span class="string">"cn.javacodes.spring.beans.Stage"</span> <span class="attr">factory-method</span>=<span class="string">"getInstance"</span> /&gt;</span></span><br></pre></td></tr></tbody></table></figure>
     </div>
@@ -493,7 +478,6 @@ window.addEventListener('load', () => {
 
 
 
-    <div class="comments" id="waline"></div>
 </div>
   </main>
 
@@ -505,7 +489,7 @@ window.addEventListener('load', () => {
   </div>
   <div class="copyright">
     &copy; 2015 – 
-    <span itemprop="copyrightYear">2025</span>
+    <span itemprop="copyrightYear">2026</span>
     <span class="with-love">
       <i class="fa fa-heart"></i>
     </span>
@@ -547,17 +531,6 @@ window.addEventListener('load', () => {
 <noscript>
   <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
 </noscript>
-<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-CN","enable":true,"serverURL":"https://waline.bytelife.net","cssUrl":"https://unpkg.com/@waline/client@v3/dist/waline.css","commentCount":true,"pageview":false,"locale":{"placeholder":"填写昵称、邮箱即可留下你的观点与想法，邮件通知新回复（至少10字，评论审核通过后展示）。"},"pageSize":10,"visitor":false,"libUrl":"https://unpkg.com/@waline/client@v3/dist/waline.umd.js","emoji":["https://unpkg.com/@waline/emojis@1.0.1/weibo","https://unpkg.com/@waline/emojis@1.0.1/alus","https://unpkg.com/@waline/emojis@1.0.1/bilibili","https://unpkg.com/@waline/emojis@1.0.1/qq","https://unpkg.com/@waline/emojis@1.0.1/tieba","https://unpkg.com/@waline/emojis@1.0.1/tw-emoji"],"meta":["nick","mail","link"],"requiredMeta":["nick","mail"],"wordLimit":10,"el":"#waline","comment":true,"path":"/articles/27638.html"}</script>
-<link rel="stylesheet" href="https://unpkg.com/@waline/client@v3/dist/waline.css">
-<script>
-document.addEventListener('page:loaded', () => {
-  NexT.utils.loadComments(CONFIG.waline.el).then(() =>
-    NexT.utils.getScript(CONFIG.waline.libUrl, { condition: window.Waline })
-  ).then(() => 
-    Waline.init(Object.assign({}, CONFIG.waline,{ el: document.querySelector(CONFIG.waline.el) }))
-  );
-});
-</script>
 
 </body>
 </html>

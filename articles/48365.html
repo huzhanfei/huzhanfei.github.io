@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.1">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.2">
 <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
@@ -23,9 +23,9 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.css" integrity="sha256-gkQVf8UKZgQ0HyuxL/VnacadJ+D2Kox2TCEBuNQg5+w=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/6.1.14/fancybox/fancybox.css" integrity="sha256-mdaMxrItEW6hMIVJJNPKuX0B7KCSJQVEv3mVY4N2we4=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"www.bytelife.net","root":"/","images":"https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/images","scheme":"Gemini","darkmode":true,"version":"8.26.0","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"atom-one-light","dark":"atom-one-dark"},"prism":{"light":"prism-tomorrow","dark":"prism-tomorrow"},"copy_button":{"enable":true,"style":"mac"},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/config.js" defer></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.bytelife.net","root":"/","images":"https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/images","scheme":"Gemini","darkmode":true,"version":"8.29.0","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"atom-one-light","dark":"atom-one-dark"},"prism":{"light":"prism-tomorrow","dark":"prism-tomorrow"},"copy_button":{"enable":true,"style":"mac"},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/config.js" defer></script>
 
     <meta name="description" content="Java NIO (New IO) 是一个可以替代标准 Java IO API 的 IO API（从 Java 1.4 开始)，Java NIO 提供了与标准 IO 不同的 IO 工作方式。  Java NIO: Channels and Buffers（通道和缓冲区）：标准的 IO 基于字节流和字符流进行操作的，而 NIO 是基于通道（Channel）和缓冲区（Buffer）进行操作，数据总是从">
 <meta property="og:type" content="article">
@@ -77,9 +77,8 @@
 
 
   
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.umd.js" integrity="sha256-a+H7FYzJv6oU2hfsfDGM2Ohw/cR9v+hPfxHCLdmCrE8=" crossorigin="anonymous" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/6.1.14/fancybox/fancybox.umd.js" integrity="sha256-QnJV4HT5r8i89ovZGRD86iynZqHerEbT2xt69vDM36I=" crossorigin="anonymous" defer></script>
 <script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/utils.js" defer></script><script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/motion.js" defer></script><script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/sidebar.js" defer></script><script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/next-boot.js" defer></script><script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/pjax.js" defer></script>
 
   
@@ -103,7 +102,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/3.0.1/quicklink.umd.js" integrity="sha256-44BednzIpUeQJcY8qtLyarFu0UCCTbgmWOvaoehiFQQ=" crossorigin="anonymous" defer></script>
   <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":false,"delay":true,"timeout":3000,"priority":true,"url":"https://www.bytelife.net/articles/48365.html"}</script>
   <script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/third-party/quicklink.js" defer></script>
-<link rel="dns-prefetch" href="https://waline.bytelife.net">
+
 <meta name="keywords" content="java,nio,阻塞,同步,异步,多路复用,selector,channel,buffer,linux,网络模型,ByteLife,Jeffrey" />
 
 
@@ -362,20 +361,6 @@ window.addEventListener('load', () => {
     </span>
 
   
-  
-  <span class="post-meta-item">
-    
-    <span class="post-meta-item-icon">
-      <i class="far fa-comment"></i>
-    </span>
-    <span class="post-meta-item-text">评论：</span>
-  
-    <a title="waline" href="/articles/48365.html#waline" itemprop="discussionUrl">
-      <span class="post-comments-count waline-comment-count" data-path="/articles/48365.html" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
     <span class="post-meta-break"></span>
     <span class="post-meta-item" title="本文字数">
       <span class="post-meta-item-icon">
@@ -558,12 +543,12 @@ window.addEventListener('load', () => {
 <li><strong>聚集（gather）</strong>：写入 Channel 是指在写操作时将多个 buffer 的数据写入同一个 Channel，因此，Channel 将多个 Buffer 中的数据 “聚集（gather）” 后发送到 Channel。</li>
 </ul>
 <p>scatter / gather 经常用于需要将传输的数据分开处理的场合，例如传输一个由消息头和消息体组成的消息，你可能会将消息体和消息头分散到不同的 buffer 中，这样你可以方便的处理消息头和消息体。 ###Scattering Reads Scattering Reads 是指数据从一个 channel 读取到多个 buffer 中。如下图描述：<br><img src="https://cdn.jsdelivr.net/gh/huzhanfei/static@main/blog/images/2021/03/16139195742355.jpg"><br> 代码示例如下：</p>
-<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">ByteBuffer</span> <span class="variable">header</span> <span class="operator">=</span> ByteBuffer.allocate(<span class="number">128</span>);</span><br><span class="line"><span class="type">ByteBuffer</span> <span class="variable">body</span> <span class="operator">=</span> ByteBuffer.allocate(<span class="number">1024</span>);</span><br><span class="line">ByteBuffer[] bufferArray = { header, body };</span><br><span class="line">channel.read(bufferArray);</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">ByteBuffer</span> <span class="variable">header</span> <span class="operator">=</span> ByteBuffer.allocate(<span class="number">128</span>);</span><br><span class="line"><span class="type">ByteBuffer</span> <span class="variable">body</span> <span class="operator">=</span> ByteBuffer.allocate(<span class="number">1024</span>);</span><br><span class="line"><span class="type">ByteBuffer</span>[] <span class="variable">bufferArray</span> <span class="operator">=</span> { header, body };</span><br><span class="line">channel.read(bufferArray);</span><br></pre></td></tr></tbody></table></figure>
 
 <p>注意 buffer 首先被插入到数组，然后再将数组作为<code>channel.read()</code> 的输入参数。<code>read()</code>方法按照 buffer 在数组中的顺序将从 channel 中读取的数据写入到 buffer，当一个 buffer 被写满后，channel 紧接着向另一个 buffer 中写。 Scattering Reads 在移动下一个 buffer 前，必须填满当前的 buffer，这也意味着它不适用于动态消息 (译者注：消息大小不固定)。换句话说，如果存在消息头和消息体，消息头必须完成填充（例如 128byte），Scattering Reads 才能正常工作。</p>
 <h3 id="Gathering-Writes"><a href="#Gathering-Writes" class="headerlink" title="Gathering Writes"></a>Gathering Writes</h3><p>Gathering Writes 是指数据从多个 buffer 写入到同一个 channel。如下图描述：<br><img src="https://cdn.jsdelivr.net/gh/huzhanfei/static@main/blog/images/2021/03/16139195928340.jpg"></p>
 <p> 代码示例如下：</p>
-<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">ByteBuffer</span> <span class="variable">header</span> <span class="operator">=</span> ByteBuffer.allocate(<span class="number">128</span>);</span><br><span class="line"><span class="type">ByteBuffer</span> <span class="variable">body</span> <span class="operator">=</span> ByteBuffer.allocate(<span class="number">1024</span>);</span><br><span class="line"><span class="comment">//write data into buffers</span></span><br><span class="line">ByteBuffer[] bufferArray = { header, body };</span><br><span class="line">channel.write(bufferArray);</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">ByteBuffer</span> <span class="variable">header</span> <span class="operator">=</span> ByteBuffer.allocate(<span class="number">128</span>);</span><br><span class="line"><span class="type">ByteBuffer</span> <span class="variable">body</span> <span class="operator">=</span> ByteBuffer.allocate(<span class="number">1024</span>);</span><br><span class="line"><span class="comment">//write data into buffers</span></span><br><span class="line"><span class="type">ByteBuffer</span>[] <span class="variable">bufferArray</span> <span class="operator">=</span> { header, body };</span><br><span class="line">channel.write(bufferArray);</span><br></pre></td></tr></tbody></table></figure>
 
 <p>buffers 数组是<code>write()</code>方法的入参，write () 方法会按照 buffer 在数组中的顺序，将数据写入到 channel，注意只有 position 和 limit 之间的数据才会被写入。因此，如果一个 buffer 的容量为 128byte，但是仅仅包含 58byte 的数据，那么这 58byte 的数据将被写入到 channel 中。因此与 Scattering Reads 相反，Gathering Writes 能较好的处理动态消息。</p>
 <hr>
@@ -781,7 +766,7 @@ window.addEventListener('load', () => {
 </ol>
 <h4 id="API调用"><a href="#API调用" class="headerlink" title="API调用"></a>API 调用</h4><p>当然，使用 NIO 的 API 调用时看起来与使用 IO 时有所不同，但这并不意外，因为并不是仅从一个 InputStream 逐字节读取，而是数据必须先读入缓冲区再处理。</p>
 <h4 id="数据处理"><a href="#数据处理" class="headerlink" title="数据处理"></a>数据处理</h4><p>使用纯粹的 NIO 设计相较 IO 设计，数据处理也受到影响。 在 IO 设计中，我们从 InputStream 或 Reader 逐字节读取数据。假设你正在处理一基于行的文本数据流，例如：</p>
-<figure class="highlight avrasm"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">Name:</span> Anna</span><br><span class="line"><span class="symbol">Age:</span> <span class="number">25</span></span><br><span class="line"><span class="symbol">Email:</span> anna@mailserver.com</span><br><span class="line"><span class="symbol">Phone:</span> <span class="number">1234567890</span></span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight dart"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Name</span>: <span class="title class_">Anna</span></span><br><span class="line"><span class="title class_">Age</span>: <span class="number">25</span></span><br><span class="line"><span class="title class_">Email</span>: anna<span class="meta">@mailserver</span>.com</span><br><span class="line"><span class="title class_">Phone</span>: <span class="number">1234567890</span></span><br></pre></td></tr></tbody></table></figure>
 
 <p>该文本行的流可以这样处理：</p>
 <figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">InputStream</span> <span class="variable">input</span> <span class="operator">=</span> ... ; <span class="comment">// get the InputStream from the client socket</span></span><br><span class="line"><span class="type">BufferedReader</span> <span class="variable">reader</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">BufferedReader</span>(<span class="keyword">new</span> <span class="title class_">InputStreamReader</span>(input));</span><br><span class="line"><span class="type">String</span> <span class="variable">nameLine</span> <span class="operator">=</span> reader.readLine();</span><br><span class="line"><span class="type">String</span> <span class="variable">ageLine</span> <span class="operator">=</span> reader.readLine();</span><br><span class="line"><span class="type">String</span> <span class="variable">emailLine</span> <span class="operator">=</span> reader.readLine();</span><br><span class="line"><span class="type">String</span> <span class="variable">phoneLine</span> <span class="operator">=</span> reader.readLine();</span><br></pre></td></tr></tbody></table></figure>
@@ -860,7 +845,6 @@ window.addEventListener('load', () => {
 
 
 
-    <div class="comments" id="waline"></div>
 </div>
   </main>
 
@@ -872,7 +856,7 @@ window.addEventListener('load', () => {
   </div>
   <div class="copyright">
     &copy; 2015 – 
-    <span itemprop="copyrightYear">2025</span>
+    <span itemprop="copyrightYear">2026</span>
     <span class="with-love">
       <i class="fa fa-heart"></i>
     </span>
@@ -914,17 +898,6 @@ window.addEventListener('load', () => {
 <noscript>
   <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
 </noscript>
-<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-CN","enable":true,"serverURL":"https://waline.bytelife.net","cssUrl":"https://unpkg.com/@waline/client@v3/dist/waline.css","commentCount":true,"pageview":false,"locale":{"placeholder":"填写昵称、邮箱即可留下你的观点与想法，邮件通知新回复（至少10字，评论审核通过后展示）。"},"pageSize":10,"visitor":false,"libUrl":"https://unpkg.com/@waline/client@v3/dist/waline.umd.js","emoji":["https://unpkg.com/@waline/emojis@1.0.1/weibo","https://unpkg.com/@waline/emojis@1.0.1/alus","https://unpkg.com/@waline/emojis@1.0.1/bilibili","https://unpkg.com/@waline/emojis@1.0.1/qq","https://unpkg.com/@waline/emojis@1.0.1/tieba","https://unpkg.com/@waline/emojis@1.0.1/tw-emoji"],"meta":["nick","mail","link"],"requiredMeta":["nick","mail"],"wordLimit":10,"el":"#waline","comment":true,"path":"/articles/48365.html"}</script>
-<link rel="stylesheet" href="https://unpkg.com/@waline/client@v3/dist/waline.css">
-<script>
-document.addEventListener('page:loaded', () => {
-  NexT.utils.loadComments(CONFIG.waline.el).then(() =>
-    NexT.utils.getScript(CONFIG.waline.libUrl, { condition: window.Waline })
-  ).then(() => 
-    Waline.init(Object.assign({}, CONFIG.waline,{ el: document.querySelector(CONFIG.waline.el) }))
-  );
-});
-</script>
 
 </body>
 </html>

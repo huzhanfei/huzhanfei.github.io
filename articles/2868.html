@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.1">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.2">
 <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
@@ -23,9 +23,9 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.css" integrity="sha256-gkQVf8UKZgQ0HyuxL/VnacadJ+D2Kox2TCEBuNQg5+w=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/6.1.14/fancybox/fancybox.css" integrity="sha256-mdaMxrItEW6hMIVJJNPKuX0B7KCSJQVEv3mVY4N2we4=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"www.bytelife.net","root":"/","images":"https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/images","scheme":"Gemini","darkmode":true,"version":"8.26.0","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"atom-one-light","dark":"atom-one-dark"},"prism":{"light":"prism-tomorrow","dark":"prism-tomorrow"},"copy_button":{"enable":true,"style":"mac"},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/config.js" defer></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.bytelife.net","root":"/","images":"https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/images","scheme":"Gemini","darkmode":true,"version":"8.29.0","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"atom-one-light","dark":"atom-one-dark"},"prism":{"light":"prism-tomorrow","dark":"prism-tomorrow"},"copy_button":{"enable":true,"style":"mac"},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/config.js" defer></script>
 
     <meta name="description" content="虽然很多场景下可以使用组件扫描和自动装配来实现 Spring 的自动化配置，但有些时候自动化配置的方案是行不通的，因此需要明确配置 Spring。比如你想讲第三方库中的组件装配到你的应用中，在这种情况下，你必须要显式装配。在进行显式配置的时候，有两种方案，Java 和 XML。 下面介绍通过 Java 代码显式装配 Bean。">
 <meta property="og:type" content="article">
@@ -64,9 +64,8 @@
 
 
   
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.umd.js" integrity="sha256-a+H7FYzJv6oU2hfsfDGM2Ohw/cR9v+hPfxHCLdmCrE8=" crossorigin="anonymous" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/6.1.14/fancybox/fancybox.umd.js" integrity="sha256-QnJV4HT5r8i89ovZGRD86iynZqHerEbT2xt69vDM36I=" crossorigin="anonymous" defer></script>
 <script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/utils.js" defer></script><script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/motion.js" defer></script><script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/sidebar.js" defer></script><script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/next-boot.js" defer></script><script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/pjax.js" defer></script>
 
   
@@ -90,7 +89,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/3.0.1/quicklink.umd.js" integrity="sha256-44BednzIpUeQJcY8qtLyarFu0UCCTbgmWOvaoehiFQQ=" crossorigin="anonymous" defer></script>
   <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":false,"delay":true,"timeout":3000,"priority":true,"url":"https://www.bytelife.net/articles/2868.html"}</script>
   <script src="https://cdn.jsdelivr.net/gh/huzhanfei/blog-assets/js/third-party/quicklink.js" defer></script>
-<link rel="dns-prefetch" href="https://waline.bytelife.net">
+
 <meta name="keywords" content="java,spring,springboot,bean,框架,ioc,di,自动装配,代码装配,注入,注解,ByteLife,Jeffrey" />
 
 
@@ -349,20 +348,6 @@ window.addEventListener('load', () => {
     </span>
 
   
-  
-  <span class="post-meta-item">
-    
-    <span class="post-meta-item-icon">
-      <i class="far fa-comment"></i>
-    </span>
-    <span class="post-meta-item-text">评论：</span>
-  
-    <a title="waline" href="/articles/2868.html#waline" itemprop="discussionUrl">
-      <span class="post-comments-count waline-comment-count" data-path="/articles/2868.html" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
     <span class="post-meta-break"></span>
     <span class="post-meta-item" title="本文字数">
       <span class="post-meta-item-icon">
@@ -393,20 +378,20 @@ window.addEventListener('load', () => {
 <h3 id="一、创建配置类"><a href="#一、创建配置类" class="headerlink" title="一、创建配置类"></a>一、创建配置类</h3><p>创建配置类的关键在于 @Configuration 注解，@Configuration 注解表明该类是一个配置类，该类包含了在 Spring 上下文中如何创建 Bean 的细节。</p>
 <figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> cn.javacodes.spring.configuration;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Configuration;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Created by Eric on 2016/10/16.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">CDPlayerConfig</span> {</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 <h3 id="二、声明简单的Bean"><a href="#二、声明简单的Bean" class="headerlink" title="二、声明简单的Bean"></a>二、声明简单的 Bean</h3><p>要在 JavaConfig 中声明 Bean，我们需要写一个方法，这个方法会创建所需类型的实例，然后给这个方法添加 @Bean 注解。比如下面的代码声明了 CompactDisc Bean：</p>
-<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Bean</span></span><br><span class="line"><span class="keyword">public</span> CompactDisc <span class="title function_">transfer</span><span class="params">()</span>{</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Transfer</span>();</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Bean</span></span><br><span class="line"><span class="keyword">public</span> <span class="type">CompactDisc</span> <span class="title function_">transfer</span><span class="params">()</span>{</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Transfer</span>();</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 <p>@Bean 注解会告诉 Spring 这个方法会返回一个对象，该对象要注册为 Spring 应用上下文中的 bean。方法体中包含了最终产生 bean 对象的逻辑。</p>
 <p>默认情况下，bean 的 ID 于带有 @Bean 注解方法的名称是一样的。在上面的例子中，bean 的名字将会是 “transfer”。如果你想为它设置一个不同的名字，可以通过 name 属性指定它的 ID：</p>
-<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Bean(name = "transfer-cd")</span></span><br><span class="line"><span class="keyword">public</span> CompactDisc <span class="title function_">transfer</span><span class="params">()</span>{</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Transfer</span>();</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Bean(name = "transfer-cd")</span></span><br><span class="line"><span class="keyword">public</span> <span class="type">CompactDisc</span> <span class="title function_">transfer</span><span class="params">()</span>{</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Transfer</span>();</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 <p>另外，方法中的方法体可以是任何你想创建 Bean 的逻辑，比如你想在一组 CD 中随机选取一个 CD 进行播放也是可以的。</p>
 <h3 id="三、借助JavaConfig实现注入"><a href="#三、借助JavaConfig实现注入" class="headerlink" title="三、借助JavaConfig实现注入"></a>三、借助 JavaConfig 实现注入</h3><p>前面声明的 CompactDisc Bean 是非常简单的，因为它没有任何依赖，那么现在想要声明一个 CDPlayer Bean，它依赖于 CompactDisc。</p>
-<h4 id="（一）引用创建Bean的方法"><a href="#（一）引用创建Bean的方法" class="headerlink" title="（一）引用创建Bean的方法"></a>（一）引用创建 Bean 的方法</h4><figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Bean</span></span><br><span class="line"><span class="keyword">public</span> CDPlayer <span class="title function_">cdPlayer</span><span class="params">()</span>{</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">CDPlayer</span>(transfer());</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h4 id="（一）引用创建Bean的方法"><a href="#（一）引用创建Bean的方法" class="headerlink" title="（一）引用创建Bean的方法"></a>（一）引用创建 Bean 的方法</h4><figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Bean</span></span><br><span class="line"><span class="keyword">public</span> <span class="type">CDPlayer</span> <span class="title function_">cdPlayer</span><span class="params">()</span>{</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">CDPlayer</span>(transfer());</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 <p>这里同样使用了 @Bean 注解，并在构造 CDPlayer 时将 CompactDisc 作为 CDPlayer 构造器的参数传入。</p>
 <p>注意：这里虽然看起来是通过调用 transfer () 方法得到 CompactDisc，但由于 transfer 方法使用了 @Bean 注解，实际上 Spring 会拦截所有对它的调用，并确保直接返回该方法所创建的 Spring 上下文中的 bean，而不是每次都对其进行实际的调用。</p>
 <p>比如说，假设你引入了另一个其他的 CDPlayer Bean，它和之前的那个 bean 完全一样。</p>
-<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Bean</span></span><br><span class="line"><span class="keyword">public</span> CDPlayer <span class="title function_">cdPlayer</span><span class="params">()</span>{</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">CDPlayer</span>(transfer());</span><br><span class="line">}</span><br><span class="line"><span class="meta">@Bean</span></span><br><span class="line"><span class="keyword">public</span> CDPlayer <span class="title function_">anotherCDPlayer</span><span class="params">()</span>{</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">CDPlayer</span>(transfer());</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Bean</span></span><br><span class="line"><span class="keyword">public</span> <span class="type">CDPlayer</span> <span class="title function_">cdPlayer</span><span class="params">()</span>{</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">CDPlayer</span>(transfer());</span><br><span class="line">}</span><br><span class="line"><span class="meta">@Bean</span></span><br><span class="line"><span class="keyword">public</span> <span class="type">CDPlayer</span> <span class="title function_">anotherCDPlayer</span><span class="params">()</span>{</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">CDPlayer</span>(transfer());</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 <p>默认情况下，Spring 中的 bean 都是单例的，我们并没有必要为第二个 CDPlayer Bean 创建完全相同的 CompactDisc 实例。Spring 会拦截对 @Bean 注解标注方法的调用并确保返回的是 Spring 创建的 Bean。</p>
 <h4 id="（二）将依赖作为参数"><a href="#（二）将依赖作为参数" class="headerlink" title="（二）将依赖作为参数"></a>（二）将依赖作为参数</h4><p>可以看到通过引用创建 Bean 的方法来解决这个问题有些让人疑惑，下面这种方式看起来更为容易理解：</p>
-<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Bean</span></span><br><span class="line"><span class="keyword">public</span> CDPlayer <span class="title function_">cdPlayer</span><span class="params">(CompactDisc compactDisc)</span>{</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">CDPlayer</span>(compactDisc);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Bean</span></span><br><span class="line"><span class="keyword">public</span> <span class="type">CDPlayer</span> <span class="title function_">cdPlayer</span><span class="params">(CompactDisc compactDisc)</span>{</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">CDPlayer</span>(compactDisc);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 <p>在这里，cdPlayer () 方法请求一个 CompactDisc 作为参数。当 Spring 调用 cdPlayer () 方法创建 bean 的时候，它会自动装配一个 CompactDisc 到配置方法中。这样方法体就可以在合适的位置使用它，通过这种方式可以避免明确的调用 @Bean 方法。</p>
 <p>通过这种方式来引用其它 Bean 是最佳的选择，因为它不要求将依赖声明到同一个配置类当中，甚至它不要求必须要在 JavaConfig 中声明，实际上它可以通过组件扫描功能来自动发现或者通过 XML 来进行配置。</p>
 <p>本例中使用了 CDPlayer 的构造器实现了 DI（依赖注入），但是完全可以使用其它风格的 DI，比如，你可以使用 setter 的方式进行注入。</p>
@@ -463,7 +448,6 @@ window.addEventListener('load', () => {
 
 
 
-    <div class="comments" id="waline"></div>
 </div>
   </main>
 
@@ -475,7 +459,7 @@ window.addEventListener('load', () => {
   </div>
   <div class="copyright">
     &copy; 2015 – 
-    <span itemprop="copyrightYear">2025</span>
+    <span itemprop="copyrightYear">2026</span>
     <span class="with-love">
       <i class="fa fa-heart"></i>
     </span>
@@ -517,17 +501,6 @@ window.addEventListener('load', () => {
 <noscript>
   <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
 </noscript>
-<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-CN","enable":true,"serverURL":"https://waline.bytelife.net","cssUrl":"https://unpkg.com/@waline/client@v3/dist/waline.css","commentCount":true,"pageview":false,"locale":{"placeholder":"填写昵称、邮箱即可留下你的观点与想法，邮件通知新回复（至少10字，评论审核通过后展示）。"},"pageSize":10,"visitor":false,"libUrl":"https://unpkg.com/@waline/client@v3/dist/waline.umd.js","emoji":["https://unpkg.com/@waline/emojis@1.0.1/weibo","https://unpkg.com/@waline/emojis@1.0.1/alus","https://unpkg.com/@waline/emojis@1.0.1/bilibili","https://unpkg.com/@waline/emojis@1.0.1/qq","https://unpkg.com/@waline/emojis@1.0.1/tieba","https://unpkg.com/@waline/emojis@1.0.1/tw-emoji"],"meta":["nick","mail","link"],"requiredMeta":["nick","mail"],"wordLimit":10,"el":"#waline","comment":true,"path":"/articles/2868.html"}</script>
-<link rel="stylesheet" href="https://unpkg.com/@waline/client@v3/dist/waline.css">
-<script>
-document.addEventListener('page:loaded', () => {
-  NexT.utils.loadComments(CONFIG.waline.el).then(() =>
-    NexT.utils.getScript(CONFIG.waline.libUrl, { condition: window.Waline })
-  ).then(() => 
-    Waline.init(Object.assign({}, CONFIG.waline,{ el: document.querySelector(CONFIG.waline.el) }))
-  );
-});
-</script>
 
 </body>
 </html>
